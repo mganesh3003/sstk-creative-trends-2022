@@ -1,0 +1,1094 @@
+/* Common styling start. */
+.wrapper {
+  max-width: 1280px;
+  width: 88.9%;
+  margin: 0 auto;
+}
+
+/* =============================
+Headings styling start.
+================================ */
+.third-heading {
+  color: #fff;
+  font-family: "Roboto-Black";
+  font-size: 60px;
+  line-height: 1.08;
+  letter-spacing: -1.09px;
+}
+/* =============================
+Headings styling start.
+================================ */
+/* gradient color start */
+.body-gradient {
+  background-image: -o-linear-gradient(279deg, #f37ef3 -4%, #728ce4 29%, #2A6567 72%);
+  background-image: linear-gradient(171deg, #f37ef3 -4%, #728ce4 29%, #2A6567 72%);
+  overflow: hidden;
+}
+/* gradient color end */
+/* =============================
+Autoplay video styling start.
+================================ */
+.autoplay {
+  padding: 80px 0;
+  position: relative;
+}
+
+.autoplay .wrapper .lifted-text { width: 32%; }
+
+.banner-bg-images {
+  position: absolute;
+  left: 50px;
+  bottom: -115px;
+}
+
+.autoplay .lifted-text { 
+  width: 33.5%; 
+  left: 30px;
+}
+
+.ja-lifted-text { line-height: 1.4; }
+/* =============================
+Autoplay video styling end.
+================================ */
+/* =============================
+Cyberpunk-collection styling start.
+================================ */
+.cyberpunk-collection {
+  padding: 30px 0 160px;
+  overflow: hidden;
+}
+
+.cyberpunk-collection { position: relative; }
+
+.cp-collection-bg-images figure {
+  position: absolute;
+  right: 100px;
+}
+
+.cp-collection-bg-images figure:first-child { top: 70px; }
+
+.cp-collection-bg-images figure:nth-child(2) {
+  top: 280px;
+  right: 0;
+}
+
+.cyberpunk-collection p::first-letter { text-transform: capitalize; }
+.autoplay-para { width: 650px; }
+.cyberpunk-para { width: 748px; }
+.cyberpunk-ja-para { word-break: keep-all;}
+
+.cyberpunk-collection ul {
+  margin: 110px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cyberpunk-collection ul li:nth-child(2) { margin-left: 20px; }
+
+.cyberpunk-collection h3 {
+  margin: 60px 0 100px 0;
+  letter-spacing: 2.73px;
+}
+/* =============================
+Cyberpunk-collection styling end.
+================================ */
+.video-collection .wrapper{ position: relative; }
+
+.video-collection .section-videos {
+  position: relative;
+  z-index: 4;
+}
+
+.video-collection {
+  padding: 0 30px 120px;
+  margin: 0;
+}
+
+/* =============================
+Callouts styling start.
+================================ */
+.callouts { 
+  padding-bottom:  140px; 
+  margin: 0 30px;
+}
+
+.callouts .wrapper { position: relative; }
+
+.callouts-bg-images figure img {
+  position: absolute;
+  bottom: 0;
+}
+
+.callouts-bg-images figure:first-child img{
+  width: 105px;
+  top: -135px;
+  left: -75px;
+  z-index: 5;
+}
+
+.callouts-bg-images figure:nth-child(2) img{
+  width: 390px;
+  right: -120px;
+  bottom: 115px;
+}
+
+.callout-icon-heading {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.callouts-heading .content-heading, 
+.callout-icon-heading .content-heading {
+  color: #fff;
+  font-family: "Roboto-Black";
+  font-size: 50px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.callout-icon-heading .content-heading { margin-left: 2%; }
+.callout-icon-heading figure { width: 40px; }
+
+.callouts .search-heading:nth-child(2) {
+  margin-left: 20px;
+  position: relative;
+}
+
+.callouts .search-heading:nth-child(6) {
+  margin: 28px 0 22px;
+  line-height: 1.1;
+}
+
+.callouts .search-heading:nth-child(6)::after { display: none; }
+
+.callouts .search-heading::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: -37px;
+  color: transparent;
+  font-size: 27px;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.callouts .callouts-percentages {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.callouts .callouts-percentages li {
+  margin-bottom: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.callouts .callouts-percentages li figure { margin-top: 25px; }
+.callouts .callouts-percentages div { margin-left: 25px; }
+
+.callouts .callouts-percentages li span {
+  color: #fff;
+  font-family: "Misto";
+  font-size: 70px;
+  line-height: 1.43;
+  letter-spacing: 2.33px;
+}
+
+.callouts .callouts-percentages li span::after { content: "%"; }
+
+.callouts .callouts-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.callouts .callouts-images li {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+
+.callouts .callouts-images li { margin-bottom: 15px; }
+
+.callouts-images video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.callouts .callouts-shutterstock-logo { width: 22%; }
+
+.callouts h2:nth-child(6) {
+  margin: 38px 0 22px 0;
+  line-height: 1.1;
+}
+
+.callouts h2:nth-child(6)::after { display: none; }
+
+.callouts p {
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: .91px;
+}
+
+.callout-videos {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.callout-content-icon { 
+  display: -webkit-box; 
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%; 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.callout-content-icon h4 {
+  margin-left: 12px;
+  font-family: "Roboto-Black";
+  font-size: 30px;
+  line-height: 1.83;
+  letter-spacing: 1px;
+}
+
+.callout-icon-heading .content-heading::after,
+.callout-content-icon h4::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 27px;
+  color: transparent;
+  font-size: 25px;
+  font-weight: 400;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.callout-videos ul .content-label,
+.callout-percentages-icon .content-label { 
+  margin-bottom: 25px;
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 30px;
+  letter-spacing: 3px; 
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+.callout-videos ul {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+.callout-videos ul li {
+  margin-left: 53px;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+}
+
+.callout-videos ul span {
+  color: #fff;
+  font-family: "Misto";
+  font-size: 60px;
+  line-height: 1.67;
+  letter-spacing: 2px;
+}
+
+.collection-design-cta {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+/* =============================
+Callouts styling end.
+================================ */
+
+/* =============================
+ad-banner section styling start.
+================================ */
+.ad-banner .pickmonkey-banner { 
+  -ms-flex-preferred-size: 44%; 
+  flex-basis: 44%;
+}
+
+.ad-banner .ad-banner-row a { 
+  -ms-flex-preferred-size: 59%; 
+  flex-basis: 59%; 
+}
+
+/* =============================
+ad-banner section styling end.
+================================ */
+/* =============================
+DE language styling start.
+================================ */
+.de-banner h2 { width: 68%;}
+.de-next-btn { text-align: right;}
+
+.de-cta-second {
+  padding: 28px 45px;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+}
+
+.de-callout-videos ul li { 
+  -ms-flex-preferred-size: max-content; 
+  flex-basis: max-content;
+}
+/* =============================
+DE language styling end.
+================================ */
+/* =============================
+ES language styling start.
+================================ */
+.es-banner h2 { width: 82%;}
+.es-next-btn { text-align: right;}
+.callouts .callout-icon-heading .es-callout-heading { font-size: 48px;}
+/* =============================
+ES language styling end.
+================================ */
+/* =============================
+FR language styling start.
+================================ */
+.fr-banner h2 { width: 82%;}
+.fr-next-btn { text-align: right;}
+/* =============================
+FR language styling end.
+================================ */
+/* =============================
+IT language styling start.
+================================ */
+.it-banner h2 { width: 90%;}
+.it-next-btn { text-align: right;}
+.it-callout-videos .content-label { 
+  width: -webkit-min-content; 
+  width: -moz-min-content;
+  width: min-content;
+}
+/* =============================
+IT language styling end.
+================================ */
+/* =============================
+KO language styling start.
+================================ */
+.ko-localized-footer .footer-text a { white-space: nowrap;}
+.callout-content-icon-ko h4 { line-height: normal;}
+
+.callout-content-icon-ko figure { 
+  width: 32px;
+  margin-bottom: 3px;
+}
+
+.lang-ja .callout-videos .callout-content-icon figure { width: 35px; }
+/* =============================
+KO language styling end.
+================================ */
+/* =============================
+PT language styling start.
+================================ */
+.pt-banner h2 { width: 82%;}
+.pt-next-btn { text-align: right;}
+/* =============================
+PT language styling end.
+================================ */
+/* =============================
+RU language styling start.
+================================ */
+.callouts .ru-callout-videos .content-label { 
+  width: -webkit-min-content; 
+  width: -moz-min-content;
+  width: min-content;
+}
+/* =============================
+RU language styling end.
+================================ */
+
+/* =============================
+Media query for 1260px styling start.
+================================ */
+@media screen and (min-width: 1280px) {
+  /* =============================
+  Cta styling start.
+  ================================ */
+  .cyberpunk .single-cta-container .big-text,
+  .cyberpunk .two-cta-container .big-text { padding: 28px 63px; }
+
+  .cyberpunk .two-cta-container .small-text { padding: 28px 48.3px; }
+  .callouts .callouts-percentages  { width: 90%; }
+  /* =============================
+  Cta styling end.
+  ================================ */
+}
+
+@media screen and (max-width: 1280px) {
+  .localized-banner .banner-bg-images { left: 25px;}
+  /* Callout section start. */
+  /* DE language start. */
+  .de-callout-videos ul span { font-size: 57px;}
+  .de-callout-videos ul li { margin-left: 27px;}
+  /* DE language end. */
+  /* ES language start. */
+  .callouts .callout-icon-heading .es-callout-heading { 
+    font-size: 38px;
+    letter-spacing: .5px;
+  }
+  /* ES language end. */
+  /* PT language start. */
+  .callouts .callout-icon-heading .pt-counter-heading {
+    font-size: 43px;
+    letter-spacing: .8px;
+  }
+  /* PT language end. */
+  /* RU language start. */
+  .callouts .ru-callout-videos .content-label {
+    font-size: 27px;
+    letter-spacing: 2px;
+  }
+  /* RU language end. */
+  /* Callout section end. */
+  /* =============================
+  video/image gallery section start
+  ================================ */
+  .callouts-bg-images figure:first-child img {
+    width: 90px;
+    top: -115px;
+    left: -65px;
+    z-index: 5;
+  }
+  /* =============================
+  video/image gallery section end
+  ================================ */
+
+  .cp-collection-bg-images figure:first-child { width: 24%; }
+  .cp-collection-bg-images figure { right: 50px; }
+  .cp-collection-bg-images figure:nth-child(2) { display: none; }
+  /* DE language styling start. */
+  .de-cta-second {
+    padding: 20px 22px 20px 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  /* DE language styling end. */
+
+  /* ad-banner section styling start. */
+  .ad-banner .ad-banner-row a { 
+    -ms-flex-preferred-size: 60%; 
+    flex-basis: 60%; 
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .localized-banner .banner-bg-images { display: none;}
+  .autoplay .wrapper .lifted-text { top: 62%; }
+  /* Collection styling start. */
+  /* DE language styling start. */
+  .de-cta-second {
+    width: 430px;
+    padding: 20px 40px;
+    font-size: 14px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    letter-spacing: 3px;
+  }
+  /* DE language styling end. */
+  /* Collection styling end. */
+  /* Callout styling start. */
+  .de-callout-videos ul span { font-size: 54px;}
+  /* ES language start. */
+  .callouts .callout-icon-heading .es-callout-heading { font-size: 37px; }
+  .callouts .callout-icon-heading .es-search-img { width: 30px;}
+  /* ES language end. */
+    /* PT language start. */
+  .callouts .callout-icon-heading .pt-counter-heading {
+    font-size: 42px;
+    letter-spacing: .8px;
+  }
+  /* PT language end. */
+  /* RU language start. */
+  .callouts .ru-callout-videos .content-label { font-size: 26px; }
+  /* RU language end. */
+  /* TH language start. */
+  .callout-icon-heading .th-callout-heading { font-size: 45px;}
+  /* TH language end. */
+  /* Callout styling end. */
+}
+/* =============================
+Media query for 1260px styling start.
+================================ */
+/* =============================
+Media query for 995px styling start.
+================================ */
+@media only screen and (max-width: 995px) {
+  /* Autoplay mobile section start. */
+  .autoplay-para,
+  .cyberpunk-para { width: 100%; }
+  .autoplay .wrapper .lifted-text { width: 45%; }
+  .autoplay { padding: 25px 0; }
+  .autoplay-bg-images img { display: none; }
+  .autoplay ul { width: 100%; }
+  .autoplay .wrapper ul li, .autoplay .wrapper li:nth-child(2), .autoplay .wrapper li:nth-child(3) { -ms-flex-preferred-size: 100%; flex-basis: 100%; }
+  .autoplay li:nth-child(2) { margin-bottom: 20px; }
+  .autoplay .wrapper .lifted-text { top: 72% }
+  .autoplay .lifted-text figure img { width: 40px; }
+  .autoplay li:not(:first-child) figure {
+    width: 61%;
+    margin-left: auto;
+  }
+  /* Autoplay mobile section end. */
+
+  /* Collection mobile styling start. */
+  .cp-collection-bg-images figure:first-child {
+    top: -90px;
+    width: 26%;
+    left: 25px;
+  }
+  
+  .cp-collection-bg-images figure:nth-child(2) { display: none; }
+  
+  .cyberpunk-collection {
+    padding: 15px 13px 50px;
+    overflow: visible;
+  }
+  
+  .cyberpunk-collection ul { margin: 40px 0; }
+  .cyberpunk-collection ul li:nth-child(2) { margin-left: 10px; }
+  /* DE language styling start. */
+  .de-cta-second {
+    width: 560px;
+    font-size: 16px;
+  }
+  /* DE language styling end. */
+  /* Collection mobile styling end. */
+  
+  
+  /* Callout styling start. */
+  .callouts { padding: 0 0 50px; }
+  .callouts-bg-images { display: none; }
+  .callout-icon-heading { margin-bottom: 28px; }
+  .callout-icon-heading figure { width: 30px;}
+  .callouts .callouts-percentages { width: auto; }
+  .callouts .callouts-percentages div { margin-left: 9px; }
+  .callouts .callouts-percentages li { margin-bottom: 26px; }
+  .callouts .callouts-percentages li figure { margin-top: 8px; }
+  .callouts .callouts-percentages li span { font-size: 50px; }
+  .callouts-heading .content-heading,
+  .callout-icon-heading .content-heading{ font-size: 40px; }
+  .callouts .callouts-images { margin: 4px 0 28px; }
+  .callouts-shutterstock-logo { width: 160px; }
+  .callout-videos { margin-top: 20px; }
+  .callout-content-icon h4 { font-size: 20px; }
+  .callouts-heading .content-para { font-size: 17px; }
+  .callouts .callouts-percentages  { width: 100%; }
+  .callouts .callouts-percentages li figure img{ height: 50px; }
+  .callouts { margin: 0; }
+
+  .callout-videos-icon h5::after {
+    top: 12px;
+    left: 90px;
+  }
+
+  .callout-content-icon h4::after,
+  .callout-icon-heading .content-heading::after {
+    left: 25px;
+    font-size: 20px;
+  }
+  
+  .callout-videos ul {
+    margin: 0 0 0 50px;
+    padding-top: 23px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .callout-videos ul .content-label,
+  .callout-percentages-icon .content-label { font-size: 16px; }
+  .ko-callouts-bigsize ul .content-label { font-size: 20px;}
+  .callout-percentages-icon .content-label { margin-bottom: 15px; }
+  .callout-videos ul li { margin-left: 40px; }
+  .callout-videos ul span { font-size: 40px; }
+
+  .collection-design-cta {
+    margin-top: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .lang-ja .callout-videos .callout-content-icon figure { width: 28px; }
+  .video-collection { padding: 0 0 35px; }
+  /* DE language start. */
+  .de-callout-videos ul span { font-size: 35px;}
+  /* DE language end. */
+  /* ES language start. */
+  .callouts .callout-icon-heading .es-callout-heading { font-size: 30px; }
+  /* ES language end. */
+  /* PT language start. */
+  .callouts .callout-icon-heading .pt-counter-heading {
+    font-size: 35px;
+    letter-spacing: .5px;
+  }
+  /* PT language end. */
+  /* RU language start. */
+  .callouts .ru-callout-videos .content-label { 
+    font-size: 18px; 
+    letter-spacing: 1px;
+  }
+  /* RU language end. */
+  /* TH language start. */
+  .callout-icon-heading .th-callout-heading { font-size: 38px;}
+  /* TH language end. */
+  /* Callout styling end. */
+  
+  /* Common responsive styling start.  */
+  /* Common heading styling start. */
+  .third-heading {
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: normal;
+  }
+  /* Common heading styling end. */
+  /* Common responsive styling end.  */
+
+  /* ad-banner section styling start. */
+  .ad-banner .ad-banner-row a { 
+    -ms-flex-preferred-size: 55%; 
+    flex-basis: 55%; 
+  }
+
+  .ad-banner .ad-banner-row .top { 
+    -ms-flex-preferred-size: 30.5%; 
+    flex-basis: 30.5%; 
+  }
+  
+  .ad-banner .ad-banner-row .bottom { 
+    -ms-flex-preferred-size: 15%; 
+    flex-basis: 15%; 
+  }
+  
+  .ad-banner .ad-banner-row .middle { margin-right: 3px; }
+  .callout-content-icon-ko figure { width: 24px; } 
+}
+
+/* =============================
+Media query for 995px styling end.
+================================ */
+/* =============================
+Media query for 767px styling end.
+================================ */
+@media only screen and (max-width: 767px) {
+  /* Collection styling start. */
+
+  .autoplay-para,
+  .cyberpunk-para { width: 100%; }
+  .cp-collection-bg-images figure:first-child { top: -80px; }
+  
+  .cyberpunk-collection h3 {
+    margin: 30px 0 40px;
+    line-height: 1.17;
+    letter-spacing: normal;
+  }
+
+  /* De language styling start. */
+  .de-cta-first { letter-spacing: 1px;}
+
+  .de-cta-second {
+    width: auto;
+    padding: 20px 38px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+  /* De language styling end. */
+  /* Ru language start. */
+  .ru-cta-first {
+    letter-spacing: .5px;
+    font-size: 14px;
+  }
+  /* Ru language end. */
+  
+  /* Collection styling end. */
+  /* Callouts styling start. */
+  .callout-videos { 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+    -ms-flex-direction: column; 
+    flex-direction: column;
+  }
+  
+  .callout-videos ul { margin: 0;}
+  .callouts .search-heading { font-size: 20px; }
+  
+  .callouts .search-heading::after {
+    top: 10px;
+    right: -31px;
+    font-size: 16px;
+  }
+  
+  .callouts .callouts-percentages li figure { margin-top: 8px; }
+  .callouts .callouts-percentages li span { font-size: 40px; }
+  .callouts-heading .content-heading,
+  .callout-icon-heading .content-heading { font-size: 25px; }
+  .callouts .callouts-images li { margin-bottom: 10px; }  
+  .callouts .callouts-shutterstock-logo { width: 30%; }
+  .callouts .callouts-percentages li { margin-bottom: 18px; }
+  .callout-icon-heading figure { width: 25px; }
+  .callouts .callouts-percentages li figure img{ height: 30px; }
+  .lang-ja .callout-videos ul li:first-child { margin-left: 0; }
+  
+  .fr-banner h2,
+  .es-banner h2,
+  .pt-banner h2 { width: 100%; }
+  /* DE language start. */
+  .de-callout-videos ul span { font-size: 40px;}
+  /* DE language end. */
+  /* ES language start. */
+  .callouts .callout-icon-heading .es-callout-heading { font-size: 17px; }
+  /* ES language end. */
+  /* PT language start. */
+  .callouts .callout-icon-heading .pt-counter-heading { font-size: 29px; }
+  /* PT language end. */
+  /* TH language start. */
+  .callout-icon-heading .th-callout-heading { font-size: 23px;}
+  /* TH language end. */
+  /* RU language start. */
+  .callouts .ru-callout-videos .content-label { font-size: 17px; }
+  /* RU language end. */
+  /* Callouts styling end. */
+
+  /* Common styling start. */
+  .third-heading { font-size: 30px; }
+  /* Common styling end. */
+}
+/* =============================
+Media query for 767px styling end.
+================================ */
+/* =============================
+Media query for 640px styling start.
+================================ */
+@media only screen and (max-width: 640px) {
+  .autoplay .wrapper .lifted-text { top: 72%; }
+  .autoplay .lifted-text figure img { width: 30px; }
+  /* Collection styling start. */
+  /* De language styling start. */
+  .de-cta-first {
+    padding: 18px 10px 18px 35px;
+    font-size: 12px;
+  }
+
+  .de-cta-second {
+    padding: 18px 35px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+  /* De language styling end. */
+  /* Ru language start. */
+  .ru-cta-first {
+    padding: 18px 22px;
+    letter-spacing: .5px;
+    font-size: 12px;
+  }
+  /* Ru language end. */
+  /* Collection styling end. */
+  /* Collouts styling start. */
+  /* DE language start. */
+  .de-callout-videos ul li { margin-left: 20px;}
+  .de-callout-videos ul span { 
+    font-size: 33px;
+    letter-spacing: 1px;
+  }
+  /* DE language end. */
+  /* PT language start. */
+  .callouts .callout-icon-heading .pt-counter-heading { font-size: 21px; }
+  /* PT language end. */
+  /* Collouts styling end. */
+}
+/* =============================
+Media query for 640px styling end.
+================================ */
+/* =============================
+Media query for 480px styling start.
+================================ */
+@media only screen and (max-width: 480px) {
+  /* autoplay */
+  .cp-collection-bg-images figure:first-child {
+    top: -65px;
+    left: 0;
+  }
+  /*  */
+  /* Collection styling start. */
+  /* De language styling start. */
+  .de-cta-first {
+    padding: 12px 4px 12px 15px;
+    font-size: 11px;
+    letter-spacing: .5px;
+  }
+
+  .de-cta-second {
+    padding: 12px 15px 13px 27px;
+    font-size: 11px;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+  /* De language styling end. */
+  /* Ru language start. */
+  .ru-cta-first {
+    padding: 12px 4px 12px 15px;
+    letter-spacing: .5px;
+    font-size: 11px;
+  }
+  /* Ru language end. */
+  /* Collection styling end. */
+  /* Callout styling start. */
+  .callouts .search-heading:nth-child(2) { margin-left: 8px;}
+  
+  .callouts .search-heading {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: .64px;
+  }
+  
+  .callouts .search-heading:nth-child(6) { margin: 10px 0 5px; }
+  .callout-icon-heading figure { width: 14px; }
+  
+  .callouts .callouts-percentages li span {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  
+  .callouts .callouts-percentages li figure {
+    width: 8px;
+    margin: 0;
+  }
+
+  .callouts-images {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 110%;
+  }
+
+  .callout-content-icon figure { width: 20%; }
+  .callouts .callouts-shutterstock-logo { width: 40%; }
+  .callout-content-icon h4 { font-size: 16px; }
+  .callouts-heading .content-para { font-size: 13px; }
+  .callout-percentages-icon .content-label { letter-spacing: 3px; }
+  .callouts .callouts-percentages li figure img{ height: 26px; }
+
+  .callout-videos ul .content-label,
+  .callout-percentages-icon .content-label { 
+    margin-top: 15px;
+    font-size: 12px; 
+    letter-spacing: 2px;
+  }
+
+  .callout-content-icon h4::after,
+  .callout-icon-heading .content-heading::after {
+    left: 10px;
+    font-size: 11px;
+  }
+  
+  .callout-videos-icon figure { 
+    width: 14px; 
+    top: -5px;
+  }
+  
+  .callout-videos ul span {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  .callout-videos ul h5 {
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+
+  .callouts .callouts-images li { margin-bottom: 5px; }
+
+  .callouts-heading .content-heading,
+  .callout-icon-heading .content-heading { 
+    font-size: 20px; 
+    letter-spacing: 0;
+  }
+
+  .callouts .callouts-percentages li { margin-bottom: 12px; }
+  .callout-icon-heading figure { width: 18px; }
+
+  .callout-videos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .callout-videos ul { padding-top: 20px;}
+  .callout-videos ul li {
+    margin: 0;
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+  }
+  /* De language start. */
+  .de-callout-videos ul span { 
+    font-size: 27px;
+    letter-spacing: .5px;
+  }  
+  /* De language end. */
+  /* ES language start. */
+  .callouts .callout-icon-heading .es-search-img { width: 18px;}
+  .callouts .callout-icon-heading .es-callout-heading { 
+    font-size: 12px; 
+    letter-spacing: 0;
+  }
+  /* ES language end. */
+  /* PT language start. */
+  .callouts .callout-icon-heading .pt-counter-heading {
+    font-size: 17px;
+    letter-spacing: 0;
+  }
+  /* PT language end. */
+  /* RU language start. */
+  .callouts .ru-callout-videos .content-label { 
+    font-size: 12px; 
+    letter-spacing: .5px;
+  }
+  /* RU language end. */
+  /* TH language start. */
+  .callout-icon-heading .th-callout-heading { 
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+  /* TH language end. */
+  /* Callout styling end. */
+  /* Common styling start. */
+  .third-heading { font-size: 18px; }
+  /* Common styling end. */
+
+  .ad-banner .ad-banner-row a { font-size: 8px; }
+
+  .lang-ja .callout-videos .callout-content-icon figure {
+    width: 23px;
+    margin-bottom: 4px;
+  }
+}
+/* =============================
+Media query for 480px styling end.
+================================ */
+/* =============================
+Media query for 375 styling start.
+================================ */
+@media screen and (max-width: 375px) {
+  /* autoplay section start */
+  .autoplay .lifted-text figure img { 
+    width: 20px; 
+    height: 20px;
+  }
+  .cp-collection-bg-images figure:first-child { top: -60px; }
+  /* autoplay section end */
+  /* Collection styling start. */
+  /* De language styling start. */
+  .de-cta-first {
+    padding: 6px 4px 6px 15px;
+    font-size: 11px;
+    letter-spacing: .5px;
+  }
+
+  .de-cta-second {
+    padding: 6px 4px 6px 15px;
+    letter-spacing: .5px;
+  }
+  /* De language styling end. */
+  /* Ru language start. */
+  .ru-cta-first {
+    padding: 6px 4px 6px 15px;
+    letter-spacing: .5px;
+    font-size: 10px;
+  }
+
+  .ru-cta-second { font-size: 10px;}
+  /* Ru language end. */
+  /* Collection styling end. */
+  /* Callout styling start. */
+  .callout-icon-heading .content-heading { font-size: 16px; }
+  .callouts-heading .content-heading { font-size: 18px; }
+  .fantastic-callouts .callouts-percentages li span { font-size: 26px; }
+  .callout-percentages-icon .content-label { font-size: 11px; }
+  .callout-videos ul .content-label, .callout-percentages-icon .content-label { letter-spacing: 1px; }
+  .callouts .callouts-percentages li span { font-size: 26px; }
+  .callouts .callout-icon-heading .pt-counter-heading { font-size: 14px; }
+  /* DE language start. */
+  .de-callout-videos ul span { font-size: 25px;}    
+  /* DE language end. */
+  /* TH language start. */
+  .callout-icon-heading .th-callout-heading { font-size: 16px;}
+  /* TH language end. */
+  /* RU language start. */
+  .callouts .ru-callout-videos .content-label { font-size: 10px; }
+  /* RU language end. */
+  /* Callout styling end. */
+
+  .ad-banner .ad-banner-row a { 
+    -ms-flex-preferred-size: 58%;
+    flex-basis: 58%; 
+  }
+
+  .lang-ja .callout-videos .callout-content-icon figure {
+    width: 20px;
+    margin-bottom: 3px;
+  }
+}
+
+/* =============================
+Media query for 375 styling end
+================================ */
