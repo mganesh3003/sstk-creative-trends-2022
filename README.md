@@ -1,0 +1,1 @@
+# sstk-creative-trends-2022
