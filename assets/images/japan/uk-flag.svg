@@ -1,0 +1,22 @@
+<svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.667969" width="34" height="20" fill="#D8D8D8"/>
+<mask id="mask0_0_2554" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="35" height="20">
+<rect x="0.667969" width="34" height="20" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_2554)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.667969 20H34.668V0H0.667969V20Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34.5378 0L21.3359 7.33333H23.7576L35.3359 0.901478V0H34.5378Z" fill="#BD0034"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.3359 13.333L35.3359 19.9997V18.6672L25.7336 13.333H23.3359Z" fill="#BD0034"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.667969 1.38397L10.9358 7.33333H13.3346L0.667969 0V1.38397Z" fill="#BD0034"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.9105 13.333L0.667969 19.8867V19.9997H2.87966L15.3346 13.333H12.9105Z" fill="#BD0034"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.668 0V6.66667L32.668 0H20.668Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.33594 0L15.3359 6.66667V0H3.33594Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.668 7.33366H34.668V2.66699L26.668 7.33366Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.668 13.333L34.668 17.9997V13.333H26.668Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 19.9997H15.3333V13.333L4 19.9997Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.668 19.9997H32.0013L20.668 13.333V19.9997Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.667969 13.333V17.9997L9.33464 13.333H0.667969Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.667969 7.33366H9.33464L0.667969 2.66699V7.33366Z" fill="#1A237B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.5375 0V8.41909H0.667969V11.9846H16.5375V20H19.7524V11.9846H35.3346V8.41909H19.7524V0H16.5375Z" fill="#BD0034"/>
+</g>
+</svg>

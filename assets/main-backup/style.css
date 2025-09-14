@@ -1,0 +1,3819 @@
+/* ==========================================================================
+1. CSS Reset Code
+========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+ box-sizing: border-box;
+ font-family: sans-serif;
+ overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+/* 1.2. Clear Fix
+========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* Font css code. */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./assets/fonts/Roboto-Light.woff') format('woff'),
+    url('./assets/fonts/Roboto-Light.woff2') format('woff2'),
+    url('./assets/fonts/Roboto-Light.ttf') format('truetype'),
+    url('./assets/fonts/Roboto-Light.eot'),
+    url('./assets/fonts/Roboto-Light.svg#Roboto-Light') format('svg'),
+    url('./assets/fonts/Roboto-Light.eot?#iefix') format('embedded-opentype');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('./assets/fonts/Roboto-Black.woff') format('woff'),
+    url('./assets/fonts/Roboto-Black.woff2') format('woff2'),
+    url('./assets/fonts/Roboto-Black.ttf') format('truetype'),
+    url('./assets/fonts/Roboto-Black.eot'),
+    url('./assets/fonts/Roboto-Black.svg#Roboto-Black') format('svg'),
+    url('./assets/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype');
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./assets/fonts/Roboto-Regular.woff') format('woff'),
+    url('./assets/fonts/Roboto-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Roboto-Regular.ttf') format('truetype'),
+    url('./assets/fonts/Roboto-Regular.eot'),
+    url('./assets/fonts/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+    url('./assets/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./assets/fonts/Roboto-Bold.woff') format('woff'),
+    url('./assets/fonts/Roboto-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Roboto-Bold.ttf') format('truetype'),
+    url('./assets/fonts/Roboto-Bold.eot'),
+    url('./assets/fonts/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+    url('./assets/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('./assets/fonts/Roboto-Medium.woff') format('woff'),
+    url('./assets/fonts/Roboto-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Roboto-Medium.ttf') format('truetype'),
+    url('./assets/fonts/Roboto-Medium.eot'),
+    url('./assets/fonts/Roboto-Medium.svg#Roboto-Medium') format('svg'),
+    url('./assets/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Misto';
+  src: url('./assets/fonts/Misto.woff') format('woff'),
+    url('./assets/fonts/Misto.woff2') format('woff2'),
+    url('./assets/fonts/Misto.ttf') format('truetype'),
+    url('./assets/fonts/Misto.eot'),
+    url('./assets/fonts/Misto.svg#Misto') format('svg'),
+    url('./assets/fonts/Misto.eot?#iefix') format('embedded-opentype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Common styling start. */
+.wrapper {
+  max-width: 1440px;
+  width: 88.9%;
+  margin: 0 auto;
+}
+
+body.modal-open { overflow: hidden; }
+
+/* =============================
+Toggle button styling start.
+================================ */
+.toggle-button .switch {
+  width: 99px;
+  height: 31px;
+  position: relative;
+  display: inline-block;
+}
+  
+.toggle-button .switch input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+  
+.toggle-button .switch .slider {
+  border: 1px solid #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  transition: .5s;
+}
+  
+.toggle-button .switch .slider::before {
+  content: "";
+  height: 17px;
+  width: 17px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 5px;
+  background-color: #fff;
+  transition: .5s;
+  transform: translate(0, -50%);
+}
+  
+.toggle-button .switch input:checked + .slider { background-color: #fff;}
+  
+.toggle-button .switch input:checked + .slider::before {
+  background-color: #0091ff;
+  left: 77px;
+}
+  
+.toggle-button .switch input:checked + .slider span {
+  right: 30px;
+  color: #000;
+}
+  
+.toggle-button .switch .slider span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: translate(0, -50%);
+  transition: .5s;
+}
+/* =============================
+Toggle button styling end.
+================================ */
+.display-none { display: none;}
+.cursor-none { cursor: none;}
+
+.cursor {
+	width: 32px;
+	position: absolute;
+	z-index: 5000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.cursor img {
+    width: 60px;
+    height: auto;
+}
+
+.avatars-window {
+  display: none;
+	height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background-color: #000;
+  overflow-y: auto;
+}
+
+.avatars-window .wrapper {
+  width: 65%;
+  height: auto;
+  padding: 90px 75px 74px;
+  border: 2px solid  #fff;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.avatars-window h3 {
+	margin-bottom: 100px;
+	font-family: 'Roboto-Black';
+  font-size: 35px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.avatars-menu {
+	margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatars-menu li {
+  box-sizing: border-box;
+  margin: 47px 0 80px 0;
+  padding: 50px 71px;
+  border: 1px solid transparent;
+  flex-basis: 24%;
+	cursor: pointer;
+  text-align: center;
+  transition: .3s all ease-in-out;
+}
+
+.avatars-menu li.active-avatar { border: 1px solid#fff; }
+.avatars-menu li:hover { border: 1px solid#fff; }
+
+.avatars-menu li img { 
+	height: 200px;
+	width: 72px;
+}
+
+.avatars-window a {
+  display: inline-block;
+  font-family: 'Roboto-Bold';
+  font-size: 21px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.95;
+  letter-spacing: normal;
+  text-align: center;
+  padding: 19px 83px;
+  border-radius: 29px;
+  border: solid 1px #fff;
+  background-color: #000;
+  transition: .3s all ease-in-out;
+  color: #fff;
+}
+
+/* =============================
+Space-time toggle styling start.
+================================ */
+.space-time-route { position: absolute;}
+
+.space-time-route h4 {
+  margin-bottom: 17px;
+  color: #fff;
+  font-family: "Roboto-Bold";
+  font-size: 10px;
+  line-height: 1.7;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.space-time-route ul { 
+  border-left: 2px solid #fff;
+  transform: translateX(8px);
+}
+
+.space-time-route ul li {
+  padding-left: 32px;
+  position: relative;
+  color: #ffffff9c;
+  font-family: "Roboto-Light";
+  font-size: 12px;
+  line-height: 1.42;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.space-time-route ul li:first-child { margin-bottom: 10px; }
+.space-time-route ul li:first-child::before { top: 0; }
+
+.space-time-route ul li::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  display: inline-block;
+  position: absolute;
+  left: -12px;
+  bottom: 0;
+  z-index: 5;
+  background-color: #000;
+}
+
+.space-time-route .active-traval { 
+  color: #fff;
+  font-family: 'Roboto-Black';
+}
+
+.space-time-route .active-traval::before { background-color: #fff;}
+/* =============================
+Space-time toggle styling end.
+================================ */
+/* Common styling end. */
+
+/* Audio container styling start. */
+.audio__container { display: none;}
+/* Audio container styling end. */
+
+/* Localized reports styling start. */
+.localized-window-fixed {
+  border: 1px solid #fff;
+  border-left: none;
+  padding: 30px 15px 30px 25px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 42%;
+  left: 0;
+  z-index: 6;
+  background-color: #000;
+  transition: .5s ease-in-out all;
+}
+
+.localized-window-fixed .localized-sub-hide-window { 
+  display: none;
+  /* max-height: 0; 
+  transition: max-height .5s;
+  overflow: hidden; */
+}
+
+/* .localized-window-fixed:hover .localized-sub-hide-window {
+  max-height: 200px;
+} */
+
+
+.localized-window-fixed .localized-hide-window { 
+  margin-left: 15px; 
+  /* width: 100px; */
+  transition: width .5s;
+}
+
+.localized-window-fixed .localized-hide-window li:first-child { margin: 5px 0 12px 0;}
+
+.localized-window-fixed figure {
+  position: relative;
+  top: 3px;
+}
+
+.localized-window-fixed h3 {
+  color: #fff;
+  font-family: "Roboto-Bold";
+  font-size: 16px;
+  line-height: 1.38;
+  letter-spacing: 1.78px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.localized-window-fixed p {
+  width: 130px;
+  color: #fff;
+  font-size: 11px;
+  font-family: "Roboto-Light";
+  line-height: 1.36;
+  letter-spacing: .5px;
+}
+
+.localized-window-fixed a {
+  color: #fff;
+  font-family: "Roboto-Black";
+  font-size: 16px;
+  line-height: 1.69;
+  letter-spacing: .73px;
+  text-decoration: underline;
+  transition: .5s;
+}
+
+.localized-window-fixed a:hover { color: #ccc;}
+
+.localized-width-js { width: 98px;}
+.localized-window-fixed:hover h3 { width: auto;}
+
+/* Localized reports styling end. */
+
+/* =============================
+Localized and home header styling start.
+================================ */ 
+.localized-header {
+ position: relative;
+ background-color: #000;
+ background-size: cover;
+ background-position: center;
+}
+ 
+.localized-header .lang-nav .lang-active a { font-weight: 900; }
+ 
+.localized-header .lang-nav {
+ padding: 28px 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+ 
+.localized-header .lang-nav li { margin: 0 10px;}
+ 
+.localized-header .lang-nav li::after {
+ content: "|";
+ position: relative;
+ left: 10px;
+ bottom: 3px;
+ color: #ccc;
+}
+ 
+.localized-header .lang-nav li:last-child::after { display: none;}
+ 
+.localized-header .lang-nav a,
+.lang-nav-mob a {
+ color: #fff;
+ font-family: Roboto-Regular;
+ font-size: 17px;
+ font-weight: 300;
+ line-height: 2.65;
+ letter-spacing: .5px;
+ transition: .5s;
+ text-transform: capitalize;
+}
+ 
+.localized-header .lang-nav a:hover { color: #c6c6c6; }
+ 
+.localized-header .logos {
+ width: 100%;
+ padding: 20px 0;
+ position: absolute;
+ top: 125px;
+ left: 0;
+ z-index: 10;
+}
+ 
+.localized-header .logos .inner-wrapper {
+ display: flex;
+ justify-content: space-between;
+ max-width: 1440px;
+ width: 88.9%;
+ margin: 0 auto;
+}
+ 
+.localized-header .logos h1 { display: flex;}
+.localized-header .logos h1 a { display: block;}
+ 
+.localized-header .logos h1 a img {
+ position: relative;
+ top: 5px;
+}
+ 
+.localized-header .logos h1 a:nth-child(2) {
+ width: 160px;
+ margin-left: 30px;
+ display: inline-block;
+ color: #fff;
+ font-family: Roboto-Black;
+ font-size: 40px;
+ font-weight: 900;
+ line-height: 1;
+ letter-spacing: -0.31px;
+ text-transform: capitalize;
+}
+ 
+.localized-header .logos .toggle-button .slider { background-color: transparent;}
+ 
+.localized-header .logos .toggle-button {
+ color: #fff;
+ text-align: right;
+ margin-top: 20px;
+}
+ 
+.lang-nav-mob { display: none; }
+ 
+.lang-nav-mob a {
+ display: block;
+ font-weight: 900;
+ position: relative;
+}
+ 
+.lang-nav-mob .mob-arrow {
+ width: 10px;
+ height: 6px;
+ transition: .2s ease-in;
+}
+ 
+.lang-nav-mob .mob-globe {
+ width: 14px;
+ height: 14px;
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+}
+ 
+.lang-nav-mob a {
+ margin-left: 24px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+ 
+.lang-nav-mob img { margin-right: 8px; }
+.mob-nav .mob-arrow { transform: rotate(180deg); }
+.body-overflow { overflow: hidden; }
+ 
+/* =============================
+Localized and home header styling end.
+================================ */
+/* =============================
+Fixed header styling start.
+================================ */
+.container .localized-header .fixed-header {
+ position: fixed;
+ top: 0;
+ background-color: #000;
+}
+/* =============================
+Fixed header styling end.
+================================ */
+.social-icons {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  right: 40px;
+  transform: translate(0, -50%);
+}
+
+.social-icons li { margin-bottom: 30px;}
+
+.social-icons a { 
+  display: inline-block;
+  text-indent: -200000px;
+}
+
+.social-icons a:hover::before { color: #ccc;}
+
+.social-icons a::before {
+  float: left;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  color: #fff;
+  text-indent: 0px;
+  transition: .5s;
+}
+
+.social-icons li:first-child a::before { content: "\f39e"; }
+.social-icons li:nth-child(2) a::before { content: "\f099"; }
+.social-icons li:nth-child(3) a::before { content: "\f0e1"; }
+.social-icons li:nth-child(4) a::before { content: "\f0d2"; }
+/* =============================
+Localized and home header styling end.
+================================ */
+
+/* =============================
+Home intro styling start.
+================================ */
+.home-intro {
+  padding-top: 155px;
+  background-color: #000;
+  color: #fff;
+}
+
+.home-intro h2 {
+  overflow: hidden;
+  width: 50%;
+  padding: 150px 0 60px 0; 
+  margin: 0 auto;
+  font-family: "Roboto-Black";
+  font-size: 90px;
+  line-height: 1.11;
+}
+
+.home-intro h2 span { 
+  width: 115%;
+  display: block;
+}
+
+.home-intro h2::first-letter { text-transform: capitalize;}
+
+.home-intro p:nth-child(2) {
+  width: 50%;
+  margin: 0 auto 75px;
+  position: relative;
+  font-family: "Roboto-Medium";
+  font-size: 22px;
+  line-height: 1.59;
+}
+
+.home-intro p:nth-child(2)::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  position: absolute;
+  right: 10px;
+  bottom: -15px;
+  display: inline-block;
+  color: transparent;
+  font-size: 25px;
+  transform: rotate(32deg);
+}
+
+.home-intro p:nth-child(3) {
+  width: 50%;
+  margin: 0 auto;
+  color: #b0b0b0;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: .82px;
+}
+
+.home-intro p:nth-child(3) span { 
+  color: #fff;
+  font-family: "Roboto-Black";
+}
+
+.home-intro figure { 
+  width: 40px;
+  margin: 100px auto 125px;
+}
+
+.home-intro figure img { width: 100%;}
+
+.home-intro p:nth-child(5) {
+  width: 50%;
+  margin: 0 auto 60px;
+  color: #b0b0b0;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: .82px;
+}
+
+.home-intro h3 {
+  width: 50%;
+  margin: 0 auto 40px;
+  font-family: "Misto";
+  font-size: 55px;
+  line-height: .91;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.home-intro p:nth-child(7) {
+  width: 50%;
+  margin: 0 auto 215px;
+  color: #b0b0b0;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: .82px;
+}
+
+.home-intro p:nth-child(8) {
+  width: 50%;
+  margin: 0 auto 20px;
+  font-family: 'Roboto-Regular';
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 2.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-intro .toggle-button {
+  padding-bottom: 130px;
+  text-align: center;
+}
+/* =============================
+Home intro styling end.
+================================ */
+/* =============================
+Space styling start.
+================================ */
+.space { background: #000; }
+.space .wrapper { position: relative;}
+.space .galaxy-image { padding-bottom: 150px; }
+
+.space .space-time-route { 
+  left: 0; 
+  z-index: 5;
+}
+
+.space .space-time-route li { 
+  width: 50%;
+  transition: .5s;
+}
+/* =============================
+Space styling end.
+================================ */
+/* =============================
+Time styling start.
+================================ */
+#timeline-section { display: none; }
+
+.time { 
+  position: relative;
+  padding: 235px 0 190px 0;
+  background-color: #000;
+}
+
+.time .wrapper  { position: relative; }
+
+.time::after {
+  content: "ssd";
+  height: 90%;
+  border-left: 1px solid #fff;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  z-index: 1;
+  color: transparent;
+  transform: translateX(-50%);
+}
+
+.time .space-time-route { 
+  top: -90px;
+  left: 0;
+}
+
+.time .time-reports li {
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: inherit;
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 5;
+  background-color: #000;
+}
+
+.time .time-reports li:last-child { margin-bottom: 0; }
+.time .time-reports .small-report > div { width: 850px;}
+.time .time-reports .big-report > div { width: 900px;}
+
+.time .time-reports li .heading { display: flex; }
+
+.time .time-reports li> div{
+  min-width: 850px;
+  /* width: 850px; */
+  border: 1px solid #fff;
+  order: 2;
+  justify-content: flex-end;
+  background-color: #000;
+}
+
+.time .time-reports li .century-box {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.time .time-reports li .century-para {
+  font-family: 'Roboto-Light';
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: .91px;
+  width: 53.5%;
+  margin: 0 auto;
+}
+
+.time .time-reports li:nth-child(1) .century-para {
+  width: auto;
+  margin: 0 auto;
+}
+
+.time .time-reports .report-no {
+  padding: 45px 0;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-basis: 18.6%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Misto";
+  font-size: 65px;
+  line-height: 1;
+  letter-spacing: 2.17px;
+  text-align: center;
+}
+
+.time .time-reports .report-title {
+  padding: 43px 0px;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  display: flex;
+  flex-basis: 81.2%;
+  align-items: center;
+}
+
+.time .time-reports .report-title h2 {
+  padding-left: 42px;
+  font-family: "Misto";
+  font-size: 65px;
+  line-height: 1.08;
+  letter-spacing: 2.17px;
+  text-transform: capitalize;
+}
+
+/* .time .time-reports li:nth-child(2) .report-title h2 { font-family: "Roboto-Light"; } */
+
+.time .time-reports li:nth-child(3) .report-title { padding: 64px 0; }
+
+.time .time-reports li:nth-child(3) .report-title h2,
+.time .time-reports li:nth-child(4) .report-title h2,
+.time .time-reports li:nth-child(5) .report-title h2,
+.time .time-reports li:nth-child(6) .report-title h2 { font-family: "Misto"; }
+
+.time .time-reports li:nth-child(4) .report-title,
+.time .time-reports li:nth-child(5) .report-title,
+.time .time-reports li:nth-child(6) .report-title  { padding: 23px 0; }
+
+.time .time-reports li:nth-child(4) .report-title h2 { display: block; }
+.time .time-reports li:nth-child(6) .report-title h2 { width: 330px; }
+
+.time .time-reports .report-title figure {
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  transform: translateY(-50%);
+}
+
+.time .time-reports p:nth-child(3) {
+  padding: 66px 0;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  flex-basis: 73.8%;
+  font-family: "Roboto-Light";
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: .91px;
+  text-align: center;
+}
+
+.time .time-reports li:nth-child(6) p:nth-child(3) { flex-basis: 63.1%; }
+.time .time-reports li:nth-child(6) .report-title figure { right: -1px;}
+
+.time .time-reports .century { 
+  border-left: 1px solid #fff;
+  padding: 36px 0 39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 26%;
+  font-family: "Misto";
+  font-size: 50px;
+  line-height: 1.3;
+  letter-spacing: 1.67px;
+  text-align: center;
+}
+
+.time .time-reports li:nth-child(4) .century { flex-basis: 28.8%; }
+
+.time .time-reports li:nth-child(6) .century { 
+  padding: 58px 0;
+  flex-basis: 36.6%; 
+}
+
+.time .time-reports li:nth-child(2) .century,
+.time .time-reports li:nth-child(3) .century,
+.time .time-reports li:nth-child(6) .century {
+  font-size: 40px;
+  line-height: 1.13;
+  letter-spacing: 1.33px;
+}
+
+.time .time-reports .century span {
+  display: block;
+  font-family: "Misto";
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: .67px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.time .time-reports .report-photos { display: flex;}
+
+.time .time-reports .report-photos div:first-child figure { border-right: 1px solid #fff;}
+.time .time-reports .report-photos .right-arrow-animation { border-top: 1px solid #fff;}
+.time .time-reports li:first-child .report-photos div:first-child figure { border: none;}
+.time .time-reports li:first-child .report-photos .report-photos-right { border-left: 1px solid #fff;}
+
+.time .report-photos .right-arrow-animation {
+  padding: 63px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time .report-photos .right-arrow-animation figure { 
+  margin-left: 15px;
+  transition: .5s;
+}
+
+.time .report-photos .right-arrow-animation img { width: 25px; }
+/* .time .time-reports img  { width: 100%;} */
+
+.time .time-reports a {
+  display: block;
+  color: #fff;
+  font-family: "Roboto-Black";
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: 2.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.time .time-reports a:hover + figure { transform: translateX(10px);}
+
+.time .time-reports li:nth-child(2) p,
+.time .time-reports li:nth-child(3) p { flex-basis: 45%;}
+
+.time .time-reports li:nth-child(2) .century,
+.time .time-reports li:nth-child(3) .century { 
+  flex-basis: 36.7%;
+  padding: 46px 0 49px;
+}
+
+.time .time-reports li { 
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 5;
+  background-color: #000;
+}
+
+.time .time-reports li:first-child { 
+  margin-top: 150px; 
+  margin-bottom: 190px;
+}
+
+.time .time-reports li:nth-child(5) { margin-bottom: 116px; }
+
+.page-bg-img {
+  width: 500px;
+  position: relative;
+  z-index: -1;
+}
+
+.time .time-reports li:nth-child(2n) .page-bg-img{ order: 2; }
+
+.time .time-reports li:nth-child(2) .page-bg-img{ 
+  top: 10px;
+  /* left: 80px; */
+}
+
+.time .time-reports li:nth-child(3) .page-bg-img{ 
+  top: 95px;
+  left: -12%;
+}
+
+.time .time-reports li:nth-child(4) .page-bg-img{ 
+  top: -20px;
+  /* left: 12%; */
+}
+
+.time .time-reports li:nth-child(5) .page-bg-img { left: 10%; }
+
+.time .time-reports li:nth-child(6) .page-bg-img{ top: 200px; }
+
+.time .time-reports li:nth-child(2) .page-bg-img img{
+  width: 260px;
+  height: 320px;
+  position: relative;
+  left: -40px;
+}
+
+	
+.time .time-reports li:nth-child(1) .page-bg-img img{
+  position: absolute;
+  top: 310px;
+  height: 700px;
+  width: 650px;
+  left: -29%;
+}
+.time .time-reports li:nth-child(3) .page-bg-img img{
+  position: absolute;
+  height: 570px;
+  width: 600px;
+}
+.time .time-reports li:nth-child(6) .page-bg-img img{ 
+  width: 75px;
+  position: absolute;
+  left: 40%;
+}
+
+.time .time-reports li:nth-child(2) .page-bg-img .spider { 
+  left: 100px; 
+  top: -30px;
+}
+
+.time .time-reports li:nth-child(2) .page-bg-img .moon { 
+  /* width: 78%; */
+  width: 236px;
+  top: 50px;
+  left: 20px;
+}
+
+.time .time-reports li:nth-child(4) .page-bg-img figure { 
+  display: flex;
+  flex-direction: column;
+ }
+
+.time .time-reports li:nth-child(4) .page-bg-img img {
+  width: 164px;
+  position: absolute;
+  top: 270px;
+  left: 100px;
+}
+
+.time .time-reports li:nth-child(4) .page-bg-img .shock { 
+  width: 220px;
+  top: -30px; 
+}
+
+.time .time-reports li:nth-child(5) .page-bg-img .pluses { 
+  width: 75px;
+  top: 400px;
+  position: absolute;
+  left: 30%;
+}
+
+.time .time-reports li:nth-child(5) .page-bg-img .wave{
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  left: -65%;
+}
+/* =============================
+Time styling end.
+================================ */
+/* =============================
+Map styling start.
+================================ */
+.map { background-color: #000;}
+
+.map .map-heading { 
+  display: flex;
+  align-items: center;
+}
+
+.map .map-heading figure { margin-left: 75px;}
+
+.map .map-heading h2 {
+  margin-left: 50px;
+  color: #fff;
+  font-family: 'Misto';
+  font-size: 85px;
+  line-height: 1.12;
+  letter-spacing: 2.83px;
+  text-transform: uppercase;
+}
+
+.map .map-heading h2::first-letter { text-transform: capitalize;}
+
+.map .map-description {
+  width: 60%;
+  margin: 20px 0 92px 185px;
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: .82px;
+}
+
+.local-trends { 
+  padding-bottom: 90px;
+  background-color: #000;
+}
+
+.map .globe-banner__map img { width: 100%;}
+
+.globe-banner__map-container {
+  background-color: #000;
+  position: relative;
+}
+
+.globe-banner__map-container ul.map-list-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.globe-banner__map-container ul.map-list-container li {
+  width: calc(10px + 1.04vw);
+  height: calc(10px + 1.04vw);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='CA'] {
+  left: 14.7%;
+  top: 13.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='US'] {
+  left: 15.2%;
+  top: 26.5%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='MX'] {
+  left: 12.2%;
+  top: 40.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='BR'] {
+  left: 24.4%;
+  top: 60.5%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='CL'] {
+  left: 22.9%;
+  bottom: 17.8%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='AR'] {
+  left: 25.9%;
+  bottom: 14.9%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='ES'] {
+  left: 43.4%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='GB'] {
+  left: 44.9%;
+  top: 17.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='NO'] {
+  left: 48.3%;
+  top: 11.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='NL'] {
+  left: 48.2%;
+  top: 18.1%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='FR'] {
+  left: 46.4%;
+  top: 23.4%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='CH'] {
+  left: 50.3%;
+  top: 22%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='DE'] {
+  right: 46.3%;
+  top: 19.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='IT'] {
+  right: 45%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='EG'] {
+  right: 45%;
+  top: 39.3%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='ZA'] {
+  right: 45%;
+  bottom: 21.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='TR'] {
+  right: 39.7%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='AE'] {
+  right: 38.4%;
+  top: 36.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='RU'] {
+  right: 29.1%;
+  top: 13.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='IN'] {
+  right: 27.6%;
+  top: 39.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='TH'] {
+  right: 21.8%;
+  top: 43.6%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='KR'] {
+  right: 15.4%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='JP'] {
+  right: 11.2%;
+  top: 30.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='AU'] {
+  right: 10.8%;
+  bottom: 20.1%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='TW'] {
+  right: 16%;
+  top: 40%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='SG'] {
+  right: 15%;
+  top: 57%;
+}
+
+.globe-banner__map-container ul.map-list-container li a {
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 1px);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .globe-banner__map-container ul.map-list-container li:hover {
+    background-color: #f54336;
+  }
+
+  .close-modal {
+    top: 13px;
+    right:1%;
+  }
+}
+
+@-webkit-keyframes point-ripples {
+  0% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+    opacity: 1;
+  }
+
+  90% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes point-ripples {
+  0% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+    opacity: 1;
+  }
+
+  90% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.globe-banner__map-container ul.map-list-container li a:before,
+.globe-banner__map-container ul.map-list-container li a:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+}
+
+.globe-banner__map-container ul.map-list-container li a:before {
+  content: '';
+  -webkit-animation: point-ripples 1.5s infinite 0.25s;
+  animation: point-ripples 1.5s infinite 0.25s;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+}
+
+.globe-banner__map-container ul.map-list-container li a:after {
+  width: calc(2px + 0.208vw);
+  height: calc(2px + 0.208vw);
+  background-color: #fff;
+  top: calc(50% + 1px);
+  left: calc(50% + 1px);
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+.globe-banner__map-container .list-popups {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  display: none;
+}
+
+.list-popups .popup-container {
+  padding: 96px 0;
+  position: absolute;
+  z-index: 10;
+  width: 800px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  border: solid 1px #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.list-popups .popup-container .wrapper-container {
+  width: 94.6%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.list-popups .popup-container .wrapper-container .left-images {
+  margin-right: 6.7%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-preferred-size: 52.5%;
+  flex-basis: 52.5%;
+}
+
+.list-popups .popup-container .wrapper-container .left-images .collection { display: none; }
+.wrapper-container .left-images .left-image-container { margin-right: 10px; }
+.wrapper-container .left-images .right img { height: 100%; }
+
+.wrapper-container .left-images .left-image-container .top-left {
+  margin-bottom: 10px;
+}
+
+.list-popups .popup-container .wrapper-container .right-content h5 {
+  margin-bottom: 9px;
+  font-family: "Roboto-Black";
+  font-size: 26px;
+  line-height: 2.31;
+  letter-spacing: 6.93px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-keywords {
+  padding: 10px 0;
+  border-top: solid 1px rgba(126, 126, 126, 0.3);
+  border-bottom: solid 1px rgba(126, 126, 126, 0.3);
+}
+
+.wrapper-container .right-content .trending-keywords > span {
+  margin-right: 30px;
+  font-family: "Roboto-Light";
+  font-size: 14px;
+  line-height: 2.14;
+  letter-spacing: 2.5px;
+  color: #828282;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-keywords ul.keywords-list {
+  margin: 10px 0;
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+[data-country-code='US']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00bfff;
+  color: #000;
+}
+
+[data-country-code='MX']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00ffff;
+  color: #000;
+}
+
+[data-country-code='BR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #9932cc;
+}
+
+[data-country-code='CL']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='ES']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='GB']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='CH']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='AE']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #0000ff;
+}
+
+[data-country-code='AR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #0000cd;
+}
+
+[data-country-code='NO']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='FR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='AU']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #ff00ff;
+}
+
+[data-country-code='NL']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #7fffd4;
+  color: #000;
+}
+
+[data-country-code='RU']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='IN']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00ff00;
+  color: #000;
+}
+
+[data-country-code='RU']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  color: #000;
+}
+
+[data-country-code='DE']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #008000;
+}
+
+[data-country-code='IT']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #7fffd4;
+  color: #000;
+}
+
+[data-country-code='EG']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #fff0f5;
+  color: #000;
+}
+
+[data-country-code='ZA']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #9400d3;
+}
+
+[data-country-code='TR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='TH']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #8a2be2;
+}
+
+[data-country-code='TW']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #ff4500;
+}
+
+[data-country-code='SG']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #daa520;
+}
+
+[data-country-code='KR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00fa9a;
+  color: #000;
+}
+
+[data-country-code='JP']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #ee82ee;
+  color: #000;
+}
+
+.right-content .trending-keywords ul.keywords-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.keywords-list li p::first-letter { text-transform: capitalize; }
+
+.right-content .trending-keywords ul.keywords-list li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  margin: 10px 10px 0 0;
+  border-radius: 50%;
+  background-color: #828282;
+  display: inline-block;
+}
+
+.list-popups .popup-container .wrapper-container .left-images .collection,
+.wrapper-container .right-content .trending-keywords .collection {
+  font-family: "Roboto-Bold";
+  font-size: 14px;
+  line-height: 1.43;
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrapper-container .right-content .trending-colors { padding: 8px 0; }
+
+.wrapper-container .right-content .trending-colors .color,
+.wrapper-container .right-content .trending-colors .color-code {
+  display: block;
+  font-family: "Roboto-Light";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.14;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-colors .color-code {
+  font-family: "Roboto-Bold";
+  letter-spacing: 2px;
+}
+
+.wrapper-container .right-content .trending-colors .color {
+  color: #828282;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-colors .color {
+  margin-bottom: 4px;
+}
+
+.wrapper-container .right-content .trending-colors .color-code {
+  padding: 0 30px;
+  background-color: #008000;
+  display: inline-block;
+}
+
+.list-popups .popup-container .close-arrow {
+  width: 20px;
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
+/* hide form iframe */
+.email-signup-target {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  aside.nav {
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  aside .music {
+    margin: 15px 3.2% 30px;
+  }
+
+  .side-menu svg {
+    height: 3vh;
+  }
+
+  aside ul li.main-title {
+    margin: 0 0 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'Canada';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'US';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'Mexico';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brazil';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chile';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentina';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'Spain';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'UK';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'Norway';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'Netherlands';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'France';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'Switzerland';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'Germany';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italy';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'Egypt';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'South Africa';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'Turkey';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'UAE';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russia';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'India';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'Thailand';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Korea';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'Japan';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australia';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'Taiwan';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPORE';
+  }
+
+  /* de-country */
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'Kanada';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'USA';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'Mexiko';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brasilien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chile';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentinien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'Spanien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'GROSSBRITANNIEN';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'Norwegen';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'NIEDERLANDE';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANKREICH';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SCHWEIZ';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'DEUTSCHLAND';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'ÄGYPTEN';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'SÜDAFRIKA';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TÜRKEI';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'VAE';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russland';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'Indien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'Thailand';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Korea';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'Japan';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'Taiwan';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPUR';
+  }
+
+  /* es-country */
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'CANADÁ';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'ESTADOS UNIDOS';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'MÉXICO';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brasil';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chile';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentina';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ESPAÑA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'REINO UNIDO';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'NORUEGA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'PAÍSES BAJOS';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANCIA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SUIZA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ALEMANIA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italia';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'EGIPTO';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'SUDÁFRICA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TURQUÍA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'EÁU';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Rusia';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'India';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'TAILANDIA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Corea';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'JAPÓN';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australia';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'TAIWÁN';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPUR';
+  }
+
+  /* fr-country */
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'CANADA';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'ÉTATS-UNIS';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'MEXIQUE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'BRÉSIL';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chili';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentine';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ESPAGNE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'ROYAUME-UNI';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'NORVÈGE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'PAYS-BAS';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANCIA';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SUISSE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ALLEMAGNE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italie';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'ÉGYPTE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'AFRIQUE DU SUD';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TURQUIE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'ÉMIRATS ARABES UNIS';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russie';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'Inde';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'THAÏLANDE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'CORÉE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'JAPON';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australie';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'TAÏWAN';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPOUR';
+  }
+
+  /* it-country */
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'Canada';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'Stati Uniti';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'Messico';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brasile';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Cile';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentina';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'Spagna';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'Regno Unito';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'Norvegia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'Paesi Bassi';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'Francia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'Svizzera';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'Germania';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'Egitto';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'Sudafrica';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'Turchia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'Emirati Arabi Uniti';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'India';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'Thailandia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Corea';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'Giappone';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'Taiwan';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPORE';
+  }
+
+  /* ja-country */
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'カナダ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: '米国';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'メキシコ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'ブラジル';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'チリ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'アルゼンチン';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'スペイン';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'イギリス';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'ノルウェー';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'オランダ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'フランス';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'スイス';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ドイツ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'イタリア';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'エジプト';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: '南アフリカ共和国';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'トルコ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'アラブ首長国連邦';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'ロシア';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'インド';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'タイ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: '韓国';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: '日本';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'オーストラリア';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: '台湾';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'シンガポール';
+  }
+
+  /* ko-country */
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: '캐나다';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: '미국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: '멕시코';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: '브라질';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: '칠레';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: '아르헨티나';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: '스페인';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: '영국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: '노르웨이';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: '네덜란드';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: '프랑스';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: '스위스';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: '독일';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: '이탈리아';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: '이집트';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: '남아프리카 공화국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: '터키';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: '아랍에미리트';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: '러시아';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: '인도';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: '태국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: '대한민국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: '일본';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: '오스트레일리아';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: '대만';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: '싱가포르';
+  }
+
+  /* pt-country */
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'CANADÁ';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'ESTADOS UNIDOS';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'MÉXICO';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'BRASIL';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'CHILE';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'ARGENTINA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ESPANHA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'REINO UNIDO';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'NORUEGA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'PAÍSES BAIXOS';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANÇA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SUÍÇA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ALEMANHA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'ITÁLIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'Egito';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'ÁFRICA DO SUL';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TURQUIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'EMIRADOS ÁRABES UNIDOS';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'RÚSSIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'ÍNDIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'TAILÂNDIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'COREIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'JAPÃO';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'AUSTRÁLIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'TAIWAN';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPURA';
+  }
+
+  /* ru-country */
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'КАНАДА';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'США';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'МЕКСИКА';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'БРАЗИЛИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'ЧИЛИ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'АРГЕНТИНА';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ИСПАНИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'СОЕДИНЕННОЕ КОРОЛЕВСТВО';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'НОРВЕГИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'НИДЕРЛАНДЫ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'ФРАНЦИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'ШВЕЙЦАРИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ГЕРМАНИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'ИТАЛИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'ЕГИПЕТ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'ЮАР';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'ТУРЦИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'ОАЭ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'РОССИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'ИНДИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'ТАИЛАНД';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'КОРЕЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'ЯПОНИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'АВСТРАЛИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'ТАЙВАНЬ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'СИНГАПУР';
+  }
+
+  /* th-country */
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'แคนาดา';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'สหรัฐอเมริกา';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'เม็กซิโก';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'บราซิล';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'ชิลี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'อาร์เจนตินา';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'สเปน';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'สหราชอาณาจักร';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'นอร์เวย์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'เนเธอร์แลนด์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'ฝรั่งเศส';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'สวิตเซอร์แลนด์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'เยอรมนี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'อิตาลี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'อียิปต์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'แอฟริกาใต้';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'ตุรกี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'สหรัฐอาหรับเอมิเรตส์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'รัสเซีย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'อินเดีย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'ไทย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'เกาหลี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'ญี่ปุ่น';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'ออสเตรเลีย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'ไต้หวัน';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'สิงคโปร์';
+  }
+
+
+  .globe-banner__map-container ul.map-list-container li::after {
+    display: none;
+  }
+
+  .globe-banner__map-container ul.map-list-container li:hover::after {
+    font-family: "Roboto-Bold";
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 4.5px;
+    text-align: center;
+    color: #fff;
+    background-color: #f54336;
+    padding: 9px calc(25px + 3.2vw);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    text-transform: uppercase;
+    z-index: 12;
+    -webkit-animation: fade-in 0.35s;
+    animation: fade-in 0.35s;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .wrapper-container .right-content .trending-keywords .collection:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .globe-banner__map-container .list-popups {
+    position: fixed;
+    z-index: 55;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .globe-banner__map-container {
+    overflow-x: hidden;
+  }
+
+  .globe-banner__map {
+    position: relative;
+  }
+
+  .globe-banner__map,
+  .globe-banner__map-container ul.map-list-container {
+    width: 200%;
+  }
+
+  .globe-banner__map-container .right-arrow,
+  .globe-banner__map-container .left-arrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    z-index: 50;
+  }
+
+  .globe-banner__map-container .right-arrow {
+    right: 0;
+  }
+
+  .globe-banner__map-container .left-arrow::after,
+  .globe-banner__map-container .right-arrow::after {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .globe-banner__map-container .left-arrow::after {
+    content: url("https://d3kqgz5iyf5gxy.cloudfront.net/Creative+trends+2021/left-arrow-local-gold.png");
+  }
+
+  .globe-banner__map-container .right-arrow::after {
+    content: url("https://d3kqgz5iyf5gxy.cloudfront.net/Creative+trends+2021/right-arrow-local-gold.png");
+  }
+
+  .local-trends .wrapper {
+    width: 100%;
+  }  
+
+  .local-trends .trends-head,
+  .local-trends .trends-body {
+    width: 90.83%;
+    margin: 0 auto;
+  }
+
+  .globe-banner__map-container .list-popups {
+    width: 97%;
+  }
+
+  .list-popups .popup-container {
+    width: 93.8%;
+    left: 52% !important;
+    padding: 20px 0 56px;
+  }
+
+  .list-popups .popup-container .wrapper-container .right-content h5 {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 3.29;
+    letter-spacing: 3.73px;
+  }
+
+  .list-popups .popup-container .wrapper-container {
+    width: 78%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .list-popups .popup-container .wrapper-container .right-content h5 {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 3.29;
+    letter-spacing: 3.73px;
+  }
+
+  .wrapper-container .right-content .trending-keywords > span {
+    font-size: 10px;
+    line-height: 3;
+    letter-spacing: 1.79px;
+  }
+
+  .wrapper-container .right-content .trending-keywords ul.keywords-list {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.73;
+    letter-spacing: normal;
+  }
+
+  .right-content .trending-keywords ul.keywords-list li::before {
+    width: 4px;
+    height: 4px;
+    margin: 9px 5px 0 0; 
+  }
+
+  .wrapper-container .right-content .trending-keywords .collection {
+    display: none;
+  }
+
+  .list-popups .popup-container .wrapper-container .left-images .collection {
+    font-size: 9px;
+    line-height: 2.22;
+    letter-spacing: 1.13px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: -30px;
+  }
+
+  .wrapper-container .right-content .trending-colors .color,
+  .wrapper-container .right-content .trending-colors .color-code {
+    font-size: 10px;
+    line-height: 2.5;
+    letter-spacing: 1.79px;
+  }
+
+  .list-popups .popup-container .close-arrow {
+    width: 10px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .wrapper-container .right-content .trending-keywords {
+    padding: 12px 0;
+    margin-bottom: 16px;
+  }
+
+  .wrapper-container .right-content .trending-colors {
+    margin-bottom: 25px;
+  }
+
+  .wrapper-container .left-images .left-image-container .top-left {
+    margin-bottom: 4px;
+  }
+
+  .wrapper-container .left-images .left-image-container {
+    margin-right: 4px;
+  }
+
+  .popup-container .wrapper {
+    width: 88.57%;
+  }
+
+  .signature-section figure img{ width: 109px; }
+  
+  .close-modal {
+    width: 20px;
+    height: 20px;
+    top: 13px;
+    right:3%;
+  }
+}
+/* =============================
+Map styling end.
+================================ */
+/* =============================
+Homepage footer styling start.
+================================ */
+.homepage-footer {
+  padding: 40px 0;
+  background: #f54335;
+  color: #fff;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-text {
+  width: 38.4%;
+}
+
+.homepage-footer form {
+  display: flex;
+  width: 61.6%;
+}
+
+.footer-text h3 {
+  font-family: 'Roboto-Bold';
+  font-size: 64px;
+}
+
+.homepage-footer .email {
+  width: 70%;
+  padding-left: 40px;
+}
+
+.homepage-footer input[type='email'] {
+  width: 100%;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid;
+  background: #f54335;
+  color: #fff;
+  font-family: 'Roboto-Regular';
+  font-size: 20px;
+  outline: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+::-moz-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.homepage-footer .signup {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.homepage-footer input[type='submit'] {
+  padding: 15px 85px;
+  border: none;
+  border-radius: 30px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto-Bold';
+  font-size: 21px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.homepage-footer input[type='submit']:hover {
+  background: #fff;
+  color: #000;
+}
+
+.trends-signup__success {
+  display: none;
+  flex-basis: 61.6%;
+  color: #fff;
+  font-family: 'Roboto-Medium';
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  justify-content: center;
+  text-align: center;
+}
+
+h3.trends-signup__sucess-header {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 19px;
+  text-transform: none;
+}
+/* =============================
+Homepage footer styling end.
+================================ */
+
+/* =============================
+Media query
+================================ */
+@media screen and (max-width: 995px) {
+  .localized-header .lang-nav {
+    width: 100%;
+    height: 0;
+    padding: 0;
+    margin: 20px 0;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: black;
+    z-index: 100;
+  }
+
+  .localized-header { background-color: #000; }
+
+  .lang-nav-mob {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .localized-header .lang-nav a {
+    margin-left: 20px;
+    font-size: 17px;
+  }
+  .localized-header .lang-nav li {
+    width: 90%;
+    border-bottom: 1px solid #fff6;
+    display: block;
+    text-align: left;
+  }
+  .localized-header .lang-nav li::after { content: ""; }
+}
+
+@media screen and (max-width: 767px) { 
+  .toggle-button .switch {
+    width: 80px;
+    height: 20px;
+  }
+  .toggle-button .switch .slider::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .lang-nav-mob a,
+  .localized-header .lang-nav a { font-size: 13px; }
+  .lang-nav-mob .mob-globe {
+    width: 13px;
+    height: 13px;
+  }
+
+  .toggle-button .switch .slider span { font-size: 10px; }
+  .toggle-button .switch input:checked + .slider::before { left: 60px; }
+  .localized-header .lang-nav { top: 30px; }
+  .localized-header .logos h1 a:nth-child(2) { font-size: 24px; }
+  .localized-header .logos .toggle-button { margin-top: 10px; }
+  .localized-header .logos h1 a img { width: 30px; }
+  .logos div figure { width: 110px; }
+  .lang-nav-mob { padding: 10px 0; }
+}
+
+@media screen and (max-width: 480px) {
+  .lang-nav-mob .mob-globe {
+    width: 12px;
+    height: 12px;
+  }
+  .lang-nav-mob a { margin-left: 20px; }
+  .localized-header .logos { padding: 10px 0; }
+  .localized-banner h2,
+  .localized-banner h2 span { font-size: 40px; }
+  .localized-banner-image img { height: 450px; }
+  .logos h1 a:first-child { margin-top: -3px; }
+  .localized-header .logos {
+    padding: 20px 0;
+    top: 80px;
+  }
+  .localized-header .logos h1 a:last-child {
+    width: 60px;
+    margin-left: 12px;
+    font-size: 20px;
+  }
+  .logos div figure {
+    width: 70%;
+    margin-left: auto;
+  }
+}

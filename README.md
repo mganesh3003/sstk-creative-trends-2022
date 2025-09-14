@@ -1,1 +1,1 @@
-# sstk-creative-trends-2022
+# shutterstock-creative-trends-report-22

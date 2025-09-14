@@ -1,0 +1,3914 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. a
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.wrapper {
+  /* max-width: 1350px;
+  width: 90%;
+  margin: 0 auto; */
+  max-width: 1440px;
+  width: 88.9%;
+  margin: 0 auto;
+}
+
+/* Font css code. */
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Black.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Misto;
+  src: url(./assets/fonts/Misto/Misto/Desktop/Misto.ttf);
+}
+
+/* Common styling start. */
+a { text-decoration: none;}
+ul { list-style: none;}
+input, button { outline: none;}
+/* =============================
+Toggle button styling start.
+================================ */
+.toggle-button .switch {
+  width: 99px;
+  height: 31px;
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-button .switch input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.toggle-button .switch .slider {
+  border: 1px solid #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  transition: .5s;
+}
+
+.toggle-button .switch .slider::before {
+  content: "";
+  height: 17px;
+  width: 17px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 5px;
+  background-color: #fff;
+  transition: .5s;
+  transform: translate(0, -50%);
+}
+
+.toggle-button .switch input:checked + .slider { background-color: #fff;}
+
+.toggle-button .switch input:checked + .slider::before { 
+  background-color: #0091ff;
+  left: 77px;
+}
+
+.toggle-button .switch input:checked + .slider span { 
+  right: 30px;
+  color: #000;
+}
+
+.toggle-button .switch .slider span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: translate(0, -50%);
+  transition: .5s;
+}
+/* =============================
+Toggle button styling end.
+================================ */
+/* =============================
+Space-time toggle styling start.
+================================ */
+.space-time-route { position: absolute;}
+
+.space-time-route h4 {
+  margin-bottom: 17px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.7;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.space-time-route ul { 
+  border-left: 1px solid #fff;
+  transform: translateX(15px);
+}
+
+.space-time-route ul li{
+  padding-left: 32px;
+  position: relative;
+  color: #ffffff9c;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.42;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.space-time-route ul li:first-child { margin-bottom: 32px;}
+
+.space-time-route ul li:first-child::before { top: 0;}
+
+.space-time-route ul li::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  display: inline-block;
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  z-index: 5;
+  background-color: #000;
+}
+
+.space-time-route .active-traval { 
+  color: #fff;
+  font-weight: 900;
+}
+
+.space-time-route .active-traval::before { background-color: #fff;}
+/* =============================
+Space-time toggle styling end.
+================================ */
+/* Common styling end. */
+
+/* Audio container styling start. */
+.audio__container { display: none;}
+/* Audio container styling end. */
+
+/* Localized reports styling start. */
+.localized-window-fixed {
+  border: 1px solid #fff;
+  border-left: none;
+  padding: 30px 15px 30px 25px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 42%;
+  left: 0;
+  z-index: 6;
+  background-color: #000;
+}
+
+.localized-window-fixed .localized-sub-hide-window { display: none;}
+
+.localized-window-fixed .localized-hide-window { margin-left: 15px;}
+.localized-window-fixed .localized-hide-window li:first-child { margin: 5px 0 12px 0;}
+
+.localized-window-fixed figure {
+  position: relative;
+  top: 3px;
+}
+
+.localized-window-fixed h3 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.38;
+  letter-spacing: 1.78px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.localized-window-fixed p {
+  width: 130px;
+  color: #fff;
+  font-size: 11px;
+  font-family: Roboto;
+  font-weight: 300;
+  line-height: 1.36;
+  letter-spacing: 0.5px;
+}
+
+.localized-window-fixed a {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.69;
+  letter-spacing: 0.73px;
+  text-decoration: underline;
+  transition: .5s;
+}
+
+.localized-window-fixed a:hover { color: #ccc;}
+
+.localized-width-js { width: 98px;}
+.localized-window-fixed:hover h3 { width: auto;}
+/* Localized reports styling end. */
+
+/* =============================
+Localized and home header styling start.
+================================ */
+.home-header { background-color: #000;}
+.localized-header {
+  background-color: #0e0717;
+  background-size: cover;
+  background-position: center;
+}
+
+.localized-header .lang-nav .lang-active a,
+.home-header .lang-nav .lang-active a { 
+  font-weight: 900;
+}
+
+.localized-header .lang-nav,
+.home-header .lang-nav {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.localized-header .lang-nav li,
+.home-header .lang-nav li { margin: 0 10px;}
+
+.localized-header .lang-nav li::after,
+.home-header .lang-nav li::after {
+  content: "|";
+  position: relative;
+  left: 10px;
+  bottom: 3px;
+  color: #ccc;
+}
+
+.localized-header .lang-nav li:last-child::after,
+.home-header .lang-nav li:last-child::after { display: none;}
+
+.localized-header .lang-nav a,
+.home-header .lang-nav a {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 2.65;
+  letter-spacing: 0.5px;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.localized-header .lang-nav a:hover,
+.home-header .lang-nav a:hover {
+  color: #c6c6c6;
+} 
+
+.localized-banner .logos,
+.home-header .logos {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.localized-banner .logos h1,
+.home-header .logos h1 { display: flex;}
+
+.localized-banner .logos h1 a,
+.home-header .logos h1 a { display: block;}
+
+.localized-banner .logos h1 a img,
+.home-header .logos h1 a img { 
+  position: relative;
+  top: 5px;
+}
+
+.localized-banner .logos h1 a:nth-child(2),
+.home-header .logos h1 a:nth-child(2) {
+  width: 160px;
+  margin-left: 30px;
+  display: inline-block;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.31px;
+  text-transform: capitalize;
+}
+
+.localized-banner .logos .toggle-button .slider { background-color: transparent;}
+
+.localized-banner .logos .toggle-button,
+.home-header .logos .toggle-button { 
+  color: #fff;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.localized-banner h2 span {
+  margin: 150px 0 37px 0;
+  display: block;
+  font-size: 80px;
+  line-height: 0.81;
+  letter-spacing: 2.67px;
+}
+
+.localized-banner h2 {
+  width: 60%;
+  margin-bottom: 160px;
+  position: relative;
+  left: 5.7%;
+  color: #fff;
+  font-family: Misto;
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: 3.33px;
+  text-transform: uppercase;
+}
+
+.social-icons {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  right: 40px;
+  transform: translate(0, -50%);
+}
+
+.social-icons li { margin-bottom: 30px;}
+
+.social-icons a { 
+  display: inline-block;
+  text-indent: -200000px;
+}
+
+.social-icons a:hover::before { color: #ccc;}
+
+.social-icons a::before {
+  float: left;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  color: #fff;
+  text-indent: 0px;
+  transition: .5s;
+}
+
+.social-icons li:first-child a::before { content: "\f39e";}
+
+.social-icons li:nth-child(2) a::before { content: "\f099";}
+
+.social-icons li:nth-child(3) a::before { content: "\f0e1";}
+
+.social-icons li:nth-child(4) a::before { content: "\f0d2";}
+/* =============================
+Localized and home header styling end.
+================================ */
+/* =============================
+Localized banner styling start.
+================================ */
+.localized-banner { 
+  padding: 1px 0;
+  background-image: url(./assets/cyberpunk-banner.jpg);
+}
+/* =============================
+Localized banner styling end.
+================================ */
+/* =============================
+Autoplay video styling start.
+================================ */
+.autoplay { 
+  padding: 80px 0;
+  background-image: linear-gradient(to bottom, #f37ef3, #728ce4);
+}
+
+.autoplay .wrapper { position: relative;}
+
+.autoplay .lifted-text {
+  width: 370px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%);
+}
+
+.autoplay .lifted-text h2{
+  margin-bottom: 60px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1.09px;
+}
+
+.autoplay .lifted-text h2::first-letter { text-transform: capitalize;}
+
+.autoplay ul {
+  width: 920px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.autoplay ul li:first-child { 
+  margin-bottom: 20px;
+  flex-basis: 100%;
+}
+
+.autoplay ul li video { width: 100%;}
+
+.autoplay ul li:nth-child(2) { flex-basis: calc(50% - 10px);}
+
+.autoplay ul li:nth-child(3) { flex-basis: calc(50% - 10px);}
+
+.autoplay ul li img { width: 100%;}
+/* =============================
+Autoplay video styling end.
+================================ */
+/* =============================
+Cyberpunk-collection styling start.
+================================ */
+
+.cyberpunk-collection { 
+  padding: 30px 0 160px 0;
+  background-image: linear-gradient(to bottom, #728ce4, #5381a7);
+  overflow: hidden;
+}
+
+.cyberpunk-collection .wrapper { position: relative;}
+
+.cp-collection-bg-images figure {
+  position: absolute;
+  right: 0;
+}
+
+.cp-collection-bg-images figure:first-child { top: 70px;}
+.cp-collection-bg-images figure:nth-child(2) { 
+  top: 280px;
+  right: -100px;
+}
+
+.cyberpunk-collection p::first-letter { text-transform: capitalize;}
+
+.cyberpunk-collection p {
+  width: 650px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;  
+  line-height: 1.4;
+  letter-spacing: 0.91px;
+}
+
+
+.cyberpunk-collection ul { 
+  margin: 110px 0;
+  display: flex;
+}
+.cyberpunk-collection ul li:nth-child(2) { margin-left: 20px;}
+
+.cyberpunk-collection h2 {
+  margin: 60px 0 100px 0;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 2.73px;
+}
+
+.collection-button {
+  padding: 22px 57px 24px 57px;
+  border-radius: 100px;
+  display: inline-flex;
+  background-color: #000;
+}
+
+.collection-button figure { margin-top: 2px;}
+
+.cyberpunk-collection a {
+  margin-left: 14px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.cyberpunk-collection a:hover { color: #728ce4;}
+/* =============================
+Cyberpunk-collection styling end.
+================================ */
+/* =============================
+Callouts styling start.
+================================ */
+.callouts {
+  padding-bottom: 150px;
+  background-image: linear-gradient(to bottom, #5381a7, #2e725e, #0a1d3b);
+  overflow: hidden;
+}
+
+.callouts .wrapper { position: relative;}
+
+.callouts-bg-images figure {
+  position: absolute;
+  bottom: 0;
+}
+
+.callouts-bg-images figure:first-child { 
+  bottom: 1040px;
+  left: -55px;
+  z-index: 3;
+}
+
+.callouts-bg-images figure:nth-child(2) {
+  right: -125px;
+  bottom: 620px;
+}
+
+.callout-icon-heading { 
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.callouts h2 {
+  margin-left: 20px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.callouts h2::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: 40px; 
+  color: transparent; 
+  font-size: 45px;
+  font-weight: 400;
+  transform: rotate(35deg);
+}
+
+.callouts h2::first-letter { text-transform: capitalize;}
+
+.callouts .callouts-percentages {
+  width: 685px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.callouts .callouts-percentages li { 
+  display: flex;
+  flex-basis: 50%;
+}
+
+.callouts .callouts-percentages li figure { margin-top: 25px;}
+
+.callouts .callouts-percentages div { margin-left: 25px;}
+
+.callouts .callouts-percentages li span {
+  color: #fff;
+  font-family: Misto;
+  font-size: 70px;
+  line-height: 1.43;
+  letter-spacing: 2.33px;
+}
+
+.callouts .callouts-percentages li h3 {
+  margin-top: 20px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.17;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.callouts .callouts-images {
+  margin: 140px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.callouts .callouts-images li { flex-basis: calc(33% - 20px);}
+
+.callouts-images video { width: 100%;}
+
+.callouts h2:nth-child(6) {
+  margin: 38px 0 22px 0;
+  line-height: 1.1;
+}
+
+.callouts h2:nth-child(6)::after { display: none;}
+
+.callouts p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.91px;
+}
+
+.callout-videos {
+  margin-top: 80px;
+  display: flex;
+}
+
+.callout-videos-icon { 
+  display: flex;
+  align-items: center;
+}
+
+.callout-videos-icon h4 {
+  margin-left: 12px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.83;
+  letter-spacing: 1px;
+}
+
+.callout-videos-icon h4::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: 40px;
+  color: transparent;
+  font-size: 25px;
+  font-weight: 400;
+  transform: rotate(35deg);
+}
+
+.callout-videos ul { 
+  padding-top: 155px;
+  margin-left: 50px;
+  display: flex;
+}
+
+.callout-videos ul li { 
+  margin-left: 70px;
+  flex-basis: 20%;
+}
+
+.callout-videos ul span {
+  color: #fff;
+  font-family: Misto;
+  font-size: 60px;
+  line-height: 1.67;
+  letter-spacing: 2px;
+}
+
+.callout-videos ul h3 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.collection-design-cta {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.collection-design-cta li {
+  padding: 22px 57px 24px 57px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.collection-design-cta li:first-child { margin-right: 50px;}
+
+.collection-design-cta li a {
+  display: inline-block;
+  margin-left: 15px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.collection-design-cta li a:hover { color: #2e725e;}
+/* =============================
+Callouts styling end.
+================================ */
+/* =============================
+Clickable content styling start.
+================================ */
+.clickable-content { 
+  padding: 60px 0 120px 0;
+  background-image: linear-gradient(#4a61a4, #0a1d3b);
+}
+
+.clickable-content figure { text-align: center;}
+
+.clickable-content h2 {
+  margin: 30px 0 90px 0;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.clickable-list, .clickable-images, .clickable-videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clickable-images, .clickable-videos { flex-basis: calc(50% - 20px);}
+
+.clickable-list h4 {
+  height: fit-content;
+  margin-right: 80px;
+  position: relative;
+  top: 50px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.clickable-list h4::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  display: inline-block;
+  color: transparent;
+  font-size: 45px;
+  transform: rotate(35deg);
+}
+
+.clickable-list ul li { margin-bottom: 40px;}
+
+.clickable-list ul span {
+  color: #fff;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.clickable-list ul h3 {
+  color: #fff;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.clickable-content a {
+  width: 27%;
+  margin: 0 auto;
+  padding: 25px 35px;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.clickable-content a:hover { color: #465d9e;}
+/* =============================
+Clickable content styling end.
+================================ */
+/* =============================
+Localized footer styling start.
+================================ */
+.localized-footer { 
+  padding: 30px 0;
+  background-color: #0e0717;
+}
+
+.localized-footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.localized-footer ul a {
+  display: inline-block;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.localized-footer ul a:hover { color: #ccc;}
+
+.localized-footer ul li:first-child a::before {
+  content: "\f060";
+  margin-right: 20px;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  color: #fff;
+}
+
+.localized-footer ul li:nth-child(2) a::after {
+  content: "\f061";
+  margin-left: 20px;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  color: #fff;
+}
+/* =============================
+Localized footer styling end.
+================================ */
+/* =============================
+Home intro styling start.
+================================ */
+.home-intro { 
+  background-color: #000;
+  color: #fff;
+}
+
+.home-intro h2 {
+  width: 50%;
+  padding: 150px 0 60px 0; 
+  margin: 0 auto;
+  font-family: Roboto;
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 1.11;
+}
+
+.home-intro h2 span { 
+  width: 115%;
+  display: block;
+}
+
+.home-intro h2::first-letter { text-transform: capitalize;}
+
+.home-intro p:nth-child(2) {
+  width: 50%;
+  margin: 0 auto 75px auto;
+  position: relative;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.59;
+}
+
+.home-intro p:nth-child(2)::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  position: absolute;
+  right: 10px;
+  bottom: -15px;
+  display: inline-block;
+  color: transparent;
+  font-size: 25px;
+  transform: rotate(32deg);
+}
+
+.home-intro p:nth-child(3) {
+  width: 50%;
+  margin: 0 auto 0 auto;
+  color: #b0b0b0;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.82px;
+}
+
+.home-intro p:nth-child(3) span { 
+  color: #fff;
+  font-weight: 900;
+}
+
+.home-intro figure { 
+  width: 40px;
+  margin: 100px auto 125px auto;
+}
+
+.home-intro figure img { width: 100%;}
+
+.home-intro p:nth-child(5) {
+  width: 50%;
+  margin: 0 auto 60px auto;
+  color: #b0b0b0;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.82px;
+}
+
+.home-intro h3 {
+  width: 50%;
+  margin: 0 auto 40px auto;
+  font-family: Misto;
+  font-size: 55px;
+  line-height: 0.91;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.home-intro p:nth-child(7) {
+  width: 50%;
+  margin: 0 auto 215px auto;
+  color: #b0b0b0;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.82px;
+}
+
+.home-intro p:nth-child(8) {
+  width: 50%;
+  margin: 0 auto 20px auto;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 2.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-intro .toggle-button {
+  padding-bottom: 130px;
+  text-align: center;
+}
+/* =============================
+Home intro styling end.
+================================ */
+/* =============================
+Space styling start.
+================================ */
+.space .wrapper { position: relative;}
+
+.space figure, .space img { width: 100%;}
+
+.space .space-time-route { left: 0px;}
+
+.space .space-time-route li { 
+  width: 50%;
+  transition: .5s;
+}
+/* =============================
+Space styling end.
+================================ */
+/* =============================
+Time styling start.
+================================ */
+.time { 
+  position: relative;
+  padding: 235px 0 190px 0;
+  background-color: #000;
+}
+
+.time .wrapper  { position: relative;}
+
+.time::after {
+  content: "ssd";
+  height: 90%;
+  border-left: 1px solid #fff;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  z-index: 1;
+  color: transparent;
+  transform: translateX(-50%);
+}
+
+.time .space-time-route { 
+  top: -90px;
+  left: 0;
+}
+
+.small-report { width: 850px;}
+.big-report { width: 900px;}
+
+.time .time-reports li:first-child { margin-left: auto;}
+.time .time-reports li:nth-child(3) { margin-left: auto;}
+.time .time-reports li:nth-child(5) { margin-left: auto;}
+
+.time .time-reports li{
+  border: 1px solid #fff;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.time .time-reports .report-no {
+  padding: 45px 0;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-basis: 18.6%;
+  justify-content: center;
+  align-items: center;
+  font-family: Misto;
+  font-size: 65px;
+  line-height: 1;
+  letter-spacing: 2.17px;
+  text-align: center;
+}
+
+.time .time-reports .report-title {
+  padding: 43px 0px;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  display: flex;
+  flex-basis: 81.2%;
+  align-items: center;
+}
+
+.time .time-reports .report-title h2 {
+  padding-left: 42px;
+  font-family: Roboto;
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: 2.17px;
+  text-transform: capitalize;
+}
+
+.time .time-reports li:nth-child(2) .report-title h2 {
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.time .time-reports li:nth-child(3) .report-title { padding: 64px 0;}
+
+.time .time-reports li:nth-child(3) .report-title h2,
+.time .time-reports li:nth-child(4) .report-title h2,
+.time .time-reports li:nth-child(5) .report-title h2,
+.time .time-reports li:nth-child(6) .report-title h2 { font-family: Misto;}
+
+
+.time .time-reports li:nth-child(4) .report-title,
+.time .time-reports li:nth-child(5) .report-title,
+.time .time-reports li:nth-child(6) .report-title  { padding: 23px 0;}
+
+.time .time-reports li:nth-child(4) .report-title h2 { display: block;}
+
+.time .time-reports li:nth-child(6) .report-title h2 { width: 330px;}
+
+.time .time-reports .report-title figure {
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  transform: translateY(-50%);
+}
+
+.time .time-reports li:nth-child(6) .report-title figure { right: -1px;}
+
+.time .time-reports p:nth-child(3) {
+  padding: 66px 0;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  flex-basis: 73.8%;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0.91px;
+  text-align: center;
+}
+
+.time .time-reports li:nth-child(6) p:nth-child(3) { flex-basis: 63.1%;}
+
+.time .time-reports li:nth-child(6) .century { flex-basis: 36.6%;}
+
+.time .time-reports .century { 
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 26%;
+  font-family: Misto;
+  font-size: 50px;
+  line-height: 1.3;
+  letter-spacing: 1.67px;
+  text-align: center;
+}
+
+.time .time-reports li:nth-child(2) .century,
+.time .time-reports li:nth-child(3) .century,
+.time .time-reports li:nth-child(6) .century {
+  font-size: 40px;
+  line-height: 1.13;
+  letter-spacing: 1.33px;
+}
+
+.time .time-reports .century span {
+  display: block;
+  font-family: Misto;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.67px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.time .time-reports .report-photos { display: flex;}
+
+.time .time-reports .report-photos div:first-child figure { border-right: 1px solid #fff;}
+.time .time-reports .report-photos .right-arrow-animation { border-top: 1px solid #fff;}
+.time .time-reports li:first-child .report-photos div:first-child figure { border: none;}
+.time .time-reports li:first-child .report-photos .report-photos-right { border-left: 1px solid #fff;}
+
+.time .report-photos .right-arrow-animation {
+  padding: 65px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time .report-photos .right-arrow-animation figure { 
+  margin-left: 15px;
+  transition: .5s;
+}
+
+.time .report-photos .right-arrow-animation img { width: 25px;}
+
+.time .time-reports img  { width: 100%;}
+
+.time .time-reports a {
+  display: block;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: 2.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.time .time-reports a:hover + figure { transform: translateX(30px);}
+
+.time .time-reports li:nth-child(2) p,
+.time .time-reports li:nth-child(3) p { flex-basis: 63%;}
+
+.time .time-reports li:nth-child(2) .century,
+.time .time-reports li:nth-child(3) .century { flex-basis: 36.7%;}
+
+.time .time-reports li { 
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 5;
+  background-color: #000;
+}
+.time .time-reports li:first-child { margin-top: 191px};
+.time .time-reports li:nth-child(5) { margin-bottom: 116px};
+/* =============================
+Time styling end.
+================================ */
+/* =============================
+Map styling start.
+================================ */
+.map { background-color: #000;}
+
+.map .map-heading { 
+  display: flex;
+  align-items: center;
+}
+
+.map .map-heading figure { margin-left: 75px;}
+
+.map .map-heading h2 {
+  margin-left: 50px;
+  color: #fff;
+  font-family: Misto;
+  font-size: 85px;
+  line-height: 1.12;
+  letter-spacing: 2.83px;
+  text-transform: uppercase;
+}
+
+.map .map-heading h2::first-letter { text-transform: capitalize;}
+
+.map .map-description {
+  width: 60%;
+  margin: 20px 0 92px 166px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.82px;
+}
+
+.local-trends { 
+  padding-bottom: 90px;
+  background-color: #000;
+}
+
+.map .globe-banner__map img { width: 100%;}
+
+.globe-banner__map-container {
+  background-color: #000;
+  position: relative;
+}
+
+.globe-banner__map-container ul.map-list-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.globe-banner__map-container ul.map-list-container li {
+  width: calc(10px + 1.04vw);
+  height: calc(10px + 1.04vw);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='CA'] {
+  left: 14.7%;
+  top: 13.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='US'] {
+  left: 15.2%;
+  top: 26.5%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='MX'] {
+  left: 12.2%;
+  top: 40.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='BR'] {
+  left: 24.4%;
+  top: 60.5%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='CL'] {
+  left: 22.9%;
+  bottom: 17.8%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='AR'] {
+  left: 25.9%;
+  bottom: 14.9%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='ES'] {
+  left: 43.4%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='GB'] {
+  left: 44.9%;
+  top: 17.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='NO'] {
+  left: 48.3%;
+  top: 11.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='NL'] {
+  left: 48.2%;
+  top: 18.1%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='FR'] {
+  left: 46.4%;
+  top: 23.4%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='CH'] {
+  left: 50.3%;
+  top: 22%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='DE'] {
+  right: 46.3%;
+  top: 19.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='IT'] {
+  right: 45%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='EG'] {
+  right: 45%;
+  top: 39.3%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='ZA'] {
+  right: 45%;
+  bottom: 21.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='TR'] {
+  right: 39.7%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='AE'] {
+  right: 38.4%;
+  top: 36.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='RU'] {
+  right: 29.1%;
+  top: 13.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='IN'] {
+  right: 27.6%;
+  top: 39.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='TH'] {
+  right: 21.8%;
+  top: 43.6%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='KR'] {
+  right: 15.4%;
+  top: 28.7%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='JP'] {
+  right: 11.2%;
+  top: 30.2%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='AU'] {
+  right: 10.8%;
+  bottom: 20.1%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='TW'] {
+  right: 16%;
+  top: 40%;
+}
+
+.globe-banner__map-container ul.map-list-container li[data-country-code='SG'] {
+  right: 15%;
+  top: 57%;
+}
+
+.globe-banner__map-container ul.map-list-container li a {
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 1px);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .globe-banner__map-container ul.map-list-container li:hover {
+    background-color: #f54336;
+  }
+
+  .close-modal {
+    top: 13px;
+    right:1%;
+  }
+}
+
+@-webkit-keyframes point-ripples {
+  0% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+    opacity: 1;
+  }
+
+  90% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes point-ripples {
+  0% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+    opacity: 1;
+  }
+
+  90% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.globe-banner__map-container ul.map-list-container li a:before,
+.globe-banner__map-container ul.map-list-container li a:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+}
+
+.globe-banner__map-container ul.map-list-container li a:before {
+  content: '';
+  -webkit-animation: point-ripples 1.5s infinite 0.25s;
+  animation: point-ripples 1.5s infinite 0.25s;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+}
+
+.globe-banner__map-container ul.map-list-container li a:after {
+  width: calc(2px + 0.208vw);
+  height: calc(2px + 0.208vw);
+  background-color: #fff;
+  top: calc(50% + 1px);
+  left: calc(50% + 1px);
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+.globe-banner__map-container .list-popups {
+  position: absolute;
+  /* z-index: 55; */
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  display: none;
+}
+
+.list-popups .popup-container {
+  padding: 96px 0;
+  position: absolute;
+  z-index: 10;
+  width: 800px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  border: solid 1px #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.list-popups .popup-container .wrapper-container {
+  width: 94.6%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.list-popups .popup-container .wrapper-container .left-images {
+  margin-right: 6.7%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-preferred-size: 52.5%;
+  flex-basis: 52.5%;
+}
+
+.list-popups .popup-container .wrapper-container .left-images .collection {
+  display: none;
+}
+
+.wrapper-container .left-images .left-image-container {
+  margin-right: 10px;
+}
+
+.wrapper-container .left-images .right img {
+  height: 100%;
+}
+
+.wrapper-container .left-images .left-image-container .top-left {
+  margin-bottom: 10px;
+}
+
+.list-popups .popup-container .wrapper-container .right-content h5 {
+  margin-bottom: 9px;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 2.31;
+  letter-spacing: 6.93px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-keywords {
+  padding: 10px 0;
+  /*margin-bottom: 20px;*/
+  border-top: solid 1px rgba(126, 126, 126, 0.3);
+  border-bottom: solid 1px rgba(126, 126, 126, 0.3);
+}
+
+.wrapper-container .right-content .trending-keywords > span {
+  margin-right: 30px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.14;
+  letter-spacing: 2.5px;
+  color: #828282;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-keywords ul.keywords-list {
+  margin: 10px 0;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #fff;
+}
+
+[data-country-code='US']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00bfff;
+  color: #000;
+}
+
+[data-country-code='MX']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00ffff;
+  color: #000;
+}
+
+[data-country-code='BR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #9932cc;
+}
+
+[data-country-code='CL']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='ES']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='GB']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='CH']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='AE']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #0000ff;
+}
+
+[data-country-code='AR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #0000cd;
+}
+
+[data-country-code='NO']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='FR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='AU']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #ff00ff;
+}
+
+[data-country-code='NL']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #7fffd4;
+  color: #000;
+}
+
+[data-country-code='RU']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='IN']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00ff00;
+  color: #000;
+}
+
+[data-country-code='RU']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  color: #000;
+}
+
+[data-country-code='DE']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #008000;
+}
+
+[data-country-code='IT']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #7fffd4;
+  color: #000;
+}
+
+[data-country-code='EG']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #fff0f5;
+  color: #000;
+}
+
+[data-country-code='ZA']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #9400d3;
+}
+
+[data-country-code='TR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code,
+[data-country-code='TH']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #8a2be2;
+}
+
+[data-country-code='TW']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #ff4500;
+}
+
+[data-country-code='SG']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #daa520;
+}
+
+[data-country-code='KR']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #00fa9a;
+  color: #000;
+}
+
+[data-country-code='JP']
+  .wrapper-container
+  .right-content
+  .trending-colors
+  .color-code {
+  background-color: #ee82ee;
+  color: #000;
+}
+
+.right-content .trending-keywords ul.keywords-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.keywords-list li p::first-letter { text-transform: capitalize; }
+
+.right-content .trending-keywords ul.keywords-list li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  margin: 10px 10px 0 0;
+  border-radius: 50%;
+  background-color: #828282;
+  display: inline-block;
+}
+
+.list-popups .popup-container .wrapper-container .left-images .collection,
+.wrapper-container .right-content .trending-keywords .collection {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.43;
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrapper-container .right-content .trending-colors {
+  padding: 8px 0;
+}
+
+.wrapper-container .right-content .trending-colors .color,
+.wrapper-container .right-content .trending-colors .color-code {
+  display: block;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.14;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-colors .color-code {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.wrapper-container .right-content .trending-colors .color {
+  color: #828282;
+  text-transform: uppercase;
+}
+
+.wrapper-container .right-content .trending-colors .color {
+  margin-bottom: 4px;
+}
+
+.wrapper-container .right-content .trending-colors .color-code {
+  padding: 0 30px;
+  background-color: #008000;
+  display: inline-block;
+}
+
+.list-popups .popup-container .close-arrow {
+  width: 20px;
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
+/* hide form iframe */
+.email-signup-target {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  aside.nav {
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  aside .music {
+    margin: 15px 3.2% 30px;
+  }
+
+  .side-menu svg {
+    height: 3vh;
+  }
+
+  aside ul li.main-title {
+    margin: 0 0 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'Canada';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'US';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'Mexico';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brazil';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chile';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentina';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'Spain';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'UK';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'Norway';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'Netherlands';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'France';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'Switzerland';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'Germany';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italy';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'Egypt';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'South Africa';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'Turkey';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'UAE';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russia';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'India';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'Thailand';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Korea';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'Japan';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australia';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'Taiwan';
+  }
+
+  .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPORE';
+  }
+
+  /* de-country */
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'Kanada';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'USA';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'Mexiko';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brasilien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chile';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentinien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'Spanien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'GROSSBRITANNIEN';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'Norwegen';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'NIEDERLANDE';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANKREICH';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SCHWEIZ';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'DEUTSCHLAND';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'ÄGYPTEN';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'SÜDAFRIKA';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TÜRKEI';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'VAE';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russland';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'Indien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'Thailand';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Korea';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'Japan';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australien';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'Taiwan';
+  }
+
+  .de .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPUR';
+  }
+
+  /* es-country */
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'CANADÁ';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'ESTADOS UNIDOS';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'MÉXICO';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brasil';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chile';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentina';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ESPAÑA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'REINO UNIDO';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'NORUEGA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'PAÍSES BAJOS';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANCIA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SUIZA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ALEMANIA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italia';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'EGIPTO';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'SUDÁFRICA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TURQUÍA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'EÁU';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Rusia';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'India';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'TAILANDIA';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Corea';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'JAPÓN';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australia';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'TAIWÁN';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPUR';
+  }
+
+  /* fr-country */
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'CANADA';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'ÉTATS-UNIS';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'MEXIQUE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'BRÉSIL';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Chili';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentine';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ESPAGNE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'ROYAUME-UNI';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'NORVÈGE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'PAYS-BAS';
+  }
+
+  .es .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANCIA';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SUISSE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ALLEMAGNE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italie';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'ÉGYPTE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'AFRIQUE DU SUD';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TURQUIE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'ÉMIRATS ARABES UNIS';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russie';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'Inde';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'THAÏLANDE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'CORÉE';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'JAPON';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australie';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'TAÏWAN';
+  }
+
+  .fr .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPOUR';
+  }
+
+  /* it-country */
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'Canada';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'Stati Uniti';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'Messico';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'Brasile';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'Cile';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'Argentina';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'Spagna';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'Regno Unito';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'Norvegia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'Paesi Bassi';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'Francia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'Svizzera';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'Germania';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'Italia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'Egitto';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'Sudafrica';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'Turchia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'Emirati Arabi Uniti';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'Russia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'India';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'Thailandia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'Corea';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'Giappone';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'Australia';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'Taiwan';
+  }
+
+  .it .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPORE';
+  }
+
+  /* ja-country */
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'カナダ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: '米国';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'メキシコ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'ブラジル';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'チリ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'アルゼンチン';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'スペイン';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'イギリス';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'ノルウェー';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'オランダ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'フランス';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'スイス';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ドイツ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'イタリア';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'エジプト';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: '南アフリカ共和国';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'トルコ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'アラブ首長国連邦';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'ロシア';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'インド';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'タイ';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: '韓国';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: '日本';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'オーストラリア';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: '台湾';
+  }
+
+  .ja .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'シンガポール';
+  }
+
+  /* ko-country */
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: '캐나다';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: '미국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: '멕시코';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: '브라질';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: '칠레';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: '아르헨티나';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: '스페인';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: '영국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: '노르웨이';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: '네덜란드';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: '프랑스';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: '스위스';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: '독일';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: '이탈리아';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: '이집트';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: '남아프리카 공화국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: '터키';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: '아랍에미리트';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: '러시아';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: '인도';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: '태국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: '대한민국';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: '일본';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: '오스트레일리아';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: '대만';
+  }
+
+  .ko .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: '싱가포르';
+  }
+
+  /* pt-country */
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'CANADÁ';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'ESTADOS UNIDOS';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'MÉXICO';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'BRASIL';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'CHILE';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'ARGENTINA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ESPANHA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'REINO UNIDO';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'NORUEGA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'PAÍSES BAIXOS';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'FRANÇA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'SUÍÇA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ALEMANHA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'ITÁLIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'Egito';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'ÁFRICA DO SUL';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'TURQUIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'EMIRADOS ÁRABES UNIDOS';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'RÚSSIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'ÍNDIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'TAILÂNDIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'COREIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'JAPÃO';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'AUSTRÁLIA';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'TAIWAN';
+  }
+
+  .pt .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'SINGAPURA';
+  }
+
+  /* ru-country */
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'КАНАДА';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'США';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'МЕКСИКА';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'БРАЗИЛИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'ЧИЛИ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'АРГЕНТИНА';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'ИСПАНИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'СОЕДИНЕННОЕ КОРОЛЕВСТВО';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'НОРВЕГИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'НИДЕРЛАНДЫ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'ФРАНЦИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'ШВЕЙЦАРИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'ГЕРМАНИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'ИТАЛИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'ЕГИПЕТ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'ЮАР';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'ТУРЦИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'ОАЭ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'РОССИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'ИНДИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'ТАИЛАНД';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'КОРЕЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'ЯПОНИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'АВСТРАЛИЯ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'ТАЙВАНЬ';
+  }
+
+  .ru .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'СИНГАПУР';
+  }
+
+  /* th-country */
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CA']::after {
+    content: 'แคนาดา';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='US']::after {
+    content: 'สหรัฐอเมริกา';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='MX']::after {
+    content: 'เม็กซิโก';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='BR']::after {
+    content: 'บราซิล';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CL']::after {
+    content: 'ชิลี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AR']::after {
+    content: 'อาร์เจนตินา';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ES']::after {
+    content: 'สเปน';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='GB']::after {
+    content: 'สหราชอาณาจักร';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NO']::after {
+    content: 'นอร์เวย์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='NL']::after {
+    content: 'เนเธอร์แลนด์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='FR']::after {
+    content: 'ฝรั่งเศส';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='CH']::after {
+    content: 'สวิตเซอร์แลนด์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='DE']::after {
+    content: 'เยอรมนี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IT']::after {
+    content: 'อิตาลี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='EG']::after {
+    content: 'อียิปต์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='ZA']::after {
+    content: 'แอฟริกาใต้';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TR']::after {
+    content: 'ตุรกี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AE']::after {
+    content: 'สหรัฐอาหรับเอมิเรตส์';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='RU']::after {
+    content: 'รัสเซีย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='IN']::after {
+    content: 'อินเดีย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TH']::after {
+    content: 'ไทย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='KR']::after {
+    content: 'เกาหลี';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='JP']::after {
+    content: 'ญี่ปุ่น';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='AU']::after {
+    content: 'ออสเตรเลีย';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='TW']::after {
+    content: 'ไต้หวัน';
+  }
+
+  .th .globe-banner__map-container
+    ul.map-list-container
+    li[data-country-code='SG']::after {
+    content: 'สิงคโปร์';
+  }
+
+
+  .globe-banner__map-container ul.map-list-container li::after {
+    display: none;
+  }
+
+  .globe-banner__map-container ul.map-list-container li:hover::after {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.67;
+    letter-spacing: 4.5px;
+    text-align: center;
+    color: #fff;
+    background-color: #f54336;
+    padding: 9px calc(25px + 3.2vw);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    text-transform: uppercase;
+    z-index: 12;
+    -webkit-animation: fade-in 0.35s;
+    animation: fade-in 0.35s;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .wrapper-container .right-content .trending-keywords .collection:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .globe-banner__map-container .list-popups {
+    position: fixed;
+    z-index: 55;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .globe-banner__map-container {
+    overflow-x: hidden;
+  }
+
+  .globe-banner__map {
+    position: relative;
+  }
+
+  .globe-banner__map,
+  .globe-banner__map-container ul.map-list-container {
+    width: 200%;
+  }
+
+  .globe-banner__map-container .right-arrow,
+  .globe-banner__map-container .left-arrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    z-index: 50;
+  }
+
+  .globe-banner__map-container .right-arrow {
+    right: 0;
+  }
+
+  .globe-banner__map-container .left-arrow::after,
+  .globe-banner__map-container .right-arrow::after {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .globe-banner__map-container .left-arrow::after {
+    content: url("https://d3kqgz5iyf5gxy.cloudfront.net/Creative+trends+2021/left-arrow-local-gold.png");
+  }
+
+  .globe-banner__map-container .right-arrow::after {
+    content: url("https://d3kqgz5iyf5gxy.cloudfront.net/Creative+trends+2021/right-arrow-local-gold.png");
+  }
+
+  .local-trends .wrapper {
+    width: 100%;
+  }  
+
+  .local-trends .trends-head,
+  .local-trends .trends-body {
+    width: 90.83%;
+    margin: 0 auto;
+  }
+
+  .globe-banner__map-container .list-popups {
+    width: 97%;
+  }
+
+  .list-popups .popup-container {
+    width: 93.8%;
+    left: 52% !important;
+    padding: 20px 0 56px;
+  }
+
+  .list-popups .popup-container .wrapper-container .right-content h5 {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 3.29;
+    letter-spacing: 3.73px;
+  }
+
+  .list-popups .popup-container .wrapper-container {
+    width: 78%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .list-popups .popup-container .wrapper-container .right-content h5 {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 3.29;
+    letter-spacing: 3.73px;
+  }
+
+  .wrapper-container .right-content .trending-keywords > span {
+    font-size: 10px;
+    line-height: 3;
+    letter-spacing: 1.79px;
+  }
+
+  .wrapper-container .right-content .trending-keywords ul.keywords-list {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.73;
+    letter-spacing: normal;
+  }
+
+  .right-content .trending-keywords ul.keywords-list li::before {
+    width: 4px;
+    height: 4px;
+    margin: 9px 5px 0 0; 
+  }
+
+  .wrapper-container .right-content .trending-keywords .collection {
+    display: none;
+  }
+
+  .list-popups .popup-container .wrapper-container .left-images .collection {
+    font-size: 9px;
+    line-height: 2.22;
+    letter-spacing: 1.13px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: -30px;
+  }
+
+  .wrapper-container .right-content .trending-colors .color,
+  .wrapper-container .right-content .trending-colors .color-code {
+    font-size: 10px;
+    line-height: 2.5;
+    letter-spacing: 1.79px;
+  }
+
+  .list-popups .popup-container .close-arrow {
+    width: 10px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .wrapper-container .right-content .trending-keywords {
+    padding: 12px 0;
+    margin-bottom: 16px;
+  }
+
+  .wrapper-container .right-content .trending-colors {
+    margin-bottom: 25px;
+  }
+
+  .wrapper-container .left-images .left-image-container .top-left {
+    margin-bottom: 4px;
+  }
+
+  .wrapper-container .left-images .left-image-container {
+    margin-right: 4px;
+  }
+
+  .popup-container .wrapper {
+    width: 88.57%;
+  }
+
+  .signature-section figure img{ width: 109px; }
+  
+  .close-modal {
+    width: 20px;
+    height: 20px;
+    top: 13px;
+    right:3%;
+  }
+}
+/* =============================
+Map styling end.
+================================ */
+/* =============================
+Homepage footer styling start.
+================================ */
+.homepage-footer {
+  padding: 55px 0;
+  background-color: #f54336;
+}
+
+.homepage-footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homepage-footer h2 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.homepage-footer h2::first-letter { text-transform: capitalize;}
+
+.homepage-footer input {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: #f54336;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.homepage-footer button {
+  padding: 17px 120px;
+  border: none;
+  border-radius: 100px;
+  margin-left: 30px;
+  background-color: #000;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 0.95;
+  transition: .5s;
+}
+
+.homepage-footer button::first-letter { text-transform: capitalize;}
+
+.homepage-footer button:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* =============================
+Homepage footer styling end.
+================================ */

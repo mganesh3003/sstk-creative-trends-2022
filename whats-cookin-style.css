@@ -1,0 +1,1369 @@
+/* Common styling start. */
+.wrapper {
+  max-width: 1280px;
+  width: 88.9%;
+  margin: 0 auto;
+}
+/* linear gradient start*/
+.body-gradient {
+  background-image: -o-linear-gradient(282deg, #030204, #533021 90%);
+  background-image: linear-gradient(168deg, #030204, #533021 90%);
+}
+/* linear gradient end */
+/* =============================
+Autoplay video styling start.
+================================ */
+.autoplay-video { 
+  padding: 120px 0 20px;
+  position: relative;
+}
+
+.autoplay-video .wrapper { 
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.autoplay-video .block-images { 
+  margin: 20px auto 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-pack: justify; 
+  -ms-flex-pack: justify; 
+  justify-content: space-between;
+}
+
+.autoplay-video .block-images figure { -ms-flex-preferred-size: 49%; flex-basis: 49%; }
+.autoplay-video video { width: 100%; }
+
+.autoplay-video .section-row {
+  width: 72%;
+  margin: 0 auto;
+}
+
+.autoplay-video .section-row .section-content {
+  width: 90%;
+  margin: 0 auto 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.autoplay-video .section-para {
+  color: #fff;
+  font-family: 'Roboto-Light';
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: .91px;
+}
+
+.autoplay-video .section-row .section-content .section-para,
+.autoplay-video .section-row .section-para { margin: 0; }
+
+.autoplay-video .section-row .section-para { 
+  width: 70%;
+  margin:  0 auto; 
+}
+.autoplay-video .section-row .section-content figure { margin: 0 55px 57px 0; }
+.cooking-ko .autoplay-video .section-row .section-content figure { margin: 0 55px 65px 0; }
+.cooking-ru .autoplay-video .section-row .section-content figure { margin:  0 55px 87px 0; } 
+
+.cooking-ja .autoplay-video .section-row .section-content figure,
+.cooking-th .autoplay-video .section-row .section-content figure { margin: 0 55px 33px 0; }
+
+.autoplay-video .section-row .section-content img {
+  width: 40px;
+  height: 40px;
+}
+/* =============================
+Autoplay video styling end.
+================================ */
+/* =============================
+Fantastic-collection styling start.
+================================ */
+
+.fantastic-info {
+  margin: 110px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fantastic-info h2{
+  width: 30.69%;
+  margin-left: 40px;
+  color: #fff;
+  font-family: "Roboto-Regular";
+  font-size: 60px;
+  line-height: 1.08;
+  letter-spacing: 2.73px;
+}
+
+.collection-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.fantastic-collection .collection-design-cta { padding-bottom: 135px; }
+.collection-button-container div:nth-child(2) { margin-left: 3%; }
+
+.collection-button {
+  padding: 22px 57px 24px 57px;
+  border-radius: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.collection-button figure { margin-top: 2px;}
+/* =============================
+Fantastic-collection styling end.
+================================ */
+/* =============================
+Callouts styling start.
+================================ */
+.callout-content-container { display: block; }
+.fantastic-callouts .wrapper { position: relative;}
+
+.fantastic-callouts-bg-images figure {
+  position: absolute;
+  bottom: 0;
+}
+
+.callouts-heading figure { width: 22%; }
+.cooking-it .callout-content:first-child .callout-content-icon { min-width: 200px; }
+.cooking-pt .callout-content:first-child .callout-content-icon {min-width: 190px; }
+.cooking-ru .callout-content:first-child .callout-content-icon { min-width: 255px; }
+
+.callout-icon-heading { 
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.callout-content-icon h4 {
+  margin-left: 12px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.83;
+  letter-spacing: 1px;
+}
+
+.callout-icon-heading .content-heading::after,
+.callout-content-icon h4::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 27px;
+  color: transparent;
+  font-size: 25px;
+  font-weight: 400;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.fantastic-callouts h2::first-letter { text-transform: capitalize;}
+
+.fantastic-callouts .callouts-percentages {
+  width: 60%;
+  margin: 0 auto 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fantastic-callouts .callouts-percentages li { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.fantastic-callouts .callouts-percentages li figure { margin-top: 25px;}
+.fantastic-callouts .callouts-percentages div { margin: 0 0 17px 25px;}
+
+.fantastic-callouts .callouts-percentages li span {
+  color: #fff;
+  font-family: "Misto";
+  font-size: 70px;
+  line-height: 1.43;
+  letter-spacing: 2.33px;
+}
+
+.callouts-heading .content-heading,
+.callout-icon-heading .content-heading{ 
+  color: #fff;
+  font-family: "Roboto-black";
+  font-size: 50px ;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.callout-icon-heading .content-heading { margin-left: 2%; }
+
+.callout-content ul .content-label,
+.callout-percentages-icon .content-label { 
+  margin-bottom: 25px;
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 30px;
+  letter-spacing: 3px; 
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+.hide-footer-link{ visibility: hidden; }
+/* =============================
+callouts  section styling start.
+================================ */
+
+.fantastic-callouts .callouts-images img { width: 100%; }
+
+.fantastic-callouts h2:nth-child(6) {
+  margin: 38px 0 22px 0;
+  line-height: 1.1;
+}
+
+.fantastic-callouts h2:nth-child(6)::after { display: none;}
+
+.fantastic-callouts p {
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: .91px;
+}
+
+.callout-content {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fantastic-callouts .callout-content-icon-es { min-width: 190px; }
+.cooking-fr .callout-content .callout-content-icon{ min-width: 210px; }
+
+.callout-content-icon { 
+  min-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.callout-content-icon h5 {
+  margin-left: 12px;
+  color: #fff;
+  font-family: "Roboto-Regular";
+  font-size: 27px;
+  line-height: 1.83;
+  letter-spacing: 1px;
+}
+
+.callout-content ul { 
+  width: 83%;
+  padding-top: 20px;
+  margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.callout-content ul li { 
+    margin: 0 0 12px 0;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+}
+
+.callout-content:last-child { margin-top: 55px; }
+
+.callout-content ul span {
+  color: #fff;
+  font-family: "Misto";
+  font-size: 60px;
+  line-height: 1.67;
+  letter-spacing: 2px;
+}
+
+.collection-design-cta {
+  padding: 68px 0 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+
+.fantastic-callouts-cta { margin: 100px auto 80px; }
+.localized-banner-de h2 { width: 78%; }
+
+.lang-de .autoplay-video .section-row .section-content figure,
+.lang-es .autoplay-video .section-row .section-content figure { margin: 0 55px 86px 0; }
+
+.cooking-ja .ad-banner .ad-banner-row a { font-size: 33px; }
+.cooking-ko .callout-content .callout-content-icon figure { margin-bottom: 7px; }
+.cooking-ko .fantastic-callouts .callout-icon-heading figure { margin-bottom: 7px; }
+.cooking-th .callouts-heading .content-heading { line-height: 2.5; }
+.cooking-fr .localized-banner h2 { width: 76%; }
+
+.cooking-th .fantastic-callouts .callout-icon-heading figure {
+  width: 30px;
+  margin-top: 7px;
+}
+/* =============================
+Callouts styling end.
+================================ */
+/* =============================
+Ad-banner styling start.
+================================ */
+.ad-banner .pickmonkey-banner { 
+  -ms-flex-preferred-size: 44%; 
+  flex-basis: 44%;
+}
+/* =============================
+Ad-banner styling end.
+================================ */
+
+/* min-width 1280px start */
+@media screen and (min-width: 1280px) {
+  .cooking .two-cta-container .small-text { padding: 28px 58.15px; }
+  .cooking .two-cta-container .big-text { padding: 28px 56.28px; }
+}
+/* min-width 1280px end*/
+
+/* max-width 1280px start */
+@media screen and (max-width: 1280px) {
+  .fantastic-callouts .callouts-percentages { width: 84%; }
+
+  /* styling for de-lang start */
+  .localized-banner-de h2 { font-size: 80px; }
+  .callout-icon-heading .content-heading-de { font-size: 45px; }
+  /* styling for de-lang end */
+
+  /* styling for es-lang start */
+  .callout-icon-heading-es figure { margin-bottom: 50px; }
+  .callout-icon-heading-es .content-heading::after { font-size: 40px; }
+  
+  .callout-icon-heading-es .content-heading {
+    font-size: 52px;
+    line-height: 1.2;
+  }
+  /* styling for es-lang end */
+  
+  /* styling for fr-lang start */
+  .cooking-fr .localized-banner h2 { font-size: 87px; }
+  .cooking-fr .callout-icon-heading .content-heading { font-size: 45px; }
+  /* styling for fr-lang end */
+
+  /* style for it-lang start */
+  .cooking-it .localized-banner h2 { font-size: 85px; }
+
+  .cooking-it .callouts-heading .content-heading, 
+  .cooking-it .callout-icon-heading .content-heading { font-size: 46px; }
+  /* style for it-lang end */
+
+  /* style for ja-lang start */
+  .cooking-ja .localized-banner h2 {
+    width: 70%;
+    font-size: 85px;
+  }
+
+  .cooking-ja .callouts-heading .content-heading, 
+  .cooking-ja .callout-icon-heading .content-heading { font-size: 43px; }
+  .cooking-ja .ad-banner .ad-banner-row a { font-size: 31px; }
+  /* style for ja-lang end */
+
+  /* style for ko lang start */
+  .cooking-ko .localized-banner h2 {
+    width: 75%;
+    font-size: 85px;
+  }
+  /* style for ko kang end */
+
+  /* style for pt lang start */
+  .cooking-pt .callouts-heading .content-heading, 
+  .cooking-pt .callout-icon-heading .content-heading { font-size: 45px; }
+  /* style for pt lang end*/
+
+  /* style for ru lang start */
+  .cooking-ru .callout-icon-heading figure { width: 32px; }
+  
+  .cooking-ru .callouts-heading .content-heading, 
+  .cooking-ru .callout-icon-heading .content-heading { font-size: 38px; }
+
+  .cooking-ru .callout-content-icon h4 { font-size: 25px; }
+
+  .cooking-ru .callout-icon-heading .content-heading::after, 
+  .cooking-ru .callout-content-icon h4::after {font-size: 20px; }
+
+  .cooking-ru .callout-content ul { margin-left: 0; }
+  /* style for ru lang end */
+}
+/* max-width 1280px end */
+
+/* max-width 995px start*/    
+@media screen and (max-width: 995px) {
+  
+  .fantastic-info h2 { font-size: 40px; }
+  .fantastic-callouts h2 { font-size: 30px; }
+  .callout-icon-heading figure { width: 30px; }
+  .fantastic-info { margin: 50px 0; }
+  .callout-icon-heading { margin-bottom: 40px; }
+  .callout-icon-heading .content-heading{ font-size: 40px; }
+  .callout-content ul .content-label,
+  .callout-percentages-icon .content-label { 
+    font-size: 16px; 
+    letter-spacing: 1px;
+  }
+
+  .ko-callouts-bigsize ul .content-label { font-size: 20px;}
+
+  .section-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  
+  .section-row .section-block:nth-child(1) { 
+    margin: 50px 0 ;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; 
+  }
+  .autoplay-video .section-row { width: 100%; }
+  .autoplay-video { padding: 40px 0; }
+
+  .section-row .section-content:nth-child(1) figure,
+  .cooking-ko .autoplay-video .section-row .section-content figure,
+  .cooking-ja .autoplay-video .section-row .section-content figure,
+  .cooking-th .autoplay-video .section-row .section-content figure,
+  .cooking-ru .autoplay-video .section-row .section-content figure { margin-bottom: 40px; }
+
+  .autoplay-video .section-row .section-content .section-para, 
+  .autoplay-video .section-row .section-para { width: 100%; }
+  
+  .section-row .section-block:nth-child(2) { 
+    margin-bottom: 25px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; 
+  }
+  
+  .section-row .section-block:nth-child(3) { 
+    margin-bottom: 60px;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3; 
+  }
+  
+  .section-row .section-content { margin-bottom: 15px; }
+  .autoplay-video .section-row p { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
+  
+  .fantastic-callouts h2::after { 
+    top: 8px;
+    left: 15px;
+    font-size: 30px; 
+  }
+  
+  .fantastic-callouts .callouts-percentages li span { font-size: 50px; }
+  .fantastic-callouts .callouts-percentages { width: 100%; }
+  
+  .fantastic-callouts .callouts-percentages li h3 { 
+    margin-top: 15px;
+    font-size: 15px; 
+  }
+  
+  .fantastic-callouts .callouts-percentages li { margin-bottom: 15px; }
+  .fantastic-callouts .callouts-images { margin: 50px 0; }
+  .fantastic-callouts .callouts-images li { margin-bottom: 10px; }
+  .fantastic-callouts-cta { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  
+  .callout-content,
+  .callout-content:last-child { margin-top: 50px; }
+
+  .callout-content-icon h4 { font-size: 20px; }
+  .callout-content .video-callout,
+  .callout-content .video-callout li:first-child { margin-left: 0;}
+  .callout-content .video-callout { width: 100%; }
+  .callout-content .video-callout li { -ms-flex-preferred-size: 30%; flex-basis: 30%; }
+  .callout-content-icon h5 { font-size: 25px; } 
+  .callout-content ul { 
+    -webkit-box-pack: unset; 
+        -ms-flex-pack: unset; 
+            justify-content: unset; 
+  }
+
+  .callout-content ul li { 
+    -ms-flex-preferred-size: 34%; 
+    flex-basis: 34%; 
+  }
+
+  .callout-content ul span { font-size: 40px; }
+  .callout-content ul h3 { font-size: 18px; }
+  
+  .callouts-percentages li .food-names,
+  .callout-content ul .food-names { font-size: 20px; }
+  .fantastic-callouts .callouts-percentages li figure { margin-top: 8px; }
+  .fantastic-callouts .callouts-percentages li figure img{ height: 50px; }
+  .callouts-heading .content-para { font-size: 17px; }
+  .fantastic-callouts .callouts-percentages li h5 { margin-top: 5px; }
+  .callout-content-container .callout-content:last-child { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .fantastic-callouts .callouts-percentages div { margin-bottom: 0; }
+  .fantastic-collection .collection-design-cta { padding-bottom: 80px; }
+  .callouts-heading .content-heading, .callout-icon-heading .content-heading { font-size: 40px; }
+
+  .callout-content-icon h4::after,
+  .callout-icon-heading .content-heading::after {
+    left: 25px;
+    font-size: 20px;
+  }
+
+  .collection-design-cta {
+    padding: 32px 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .fantastic-callouts .collection-design-cta { padding: 10px 0 50px; }
+  
+  /* style for de-lang start */
+  .callout-icon-heading .content-heading-de { font-size: 36px; }
+  .localized-banner-de h2 { width: 70%; }
+
+  .localized-banner-de h2,
+  .localized-banner-de h2 span { font-size: 60px; }
+  .localized-header .logos-de h1 a:nth-child(2) { font-size: 27px; }
+  /* style for de-lang end */
+
+  /* styling for es-lang start */
+  .callout-icon-heading-es figure { width: 35px; }
+  .callout-icon-heading-es .content-heading::after { font-size: 32px; }
+
+  .callout-content-es ul li {
+    -ms-flex-preferred-size: 43%;
+    flex-basis: 43%;
+  }
+  /* styling for es-lang end */
+
+  /* styling for fr-lang start */
+  .cooking-fr .localized-banner h2 { 
+    width: 75%;
+    font-size: 75px; 
+  }
+
+  .cooking-fr .callouts-heading .content-heading, 
+  .cooking-fr .callout-icon-heading .content-heading { font-size: 34px; }
+  /* styling for fr-lang end */
+
+  /* style for it-lang start */
+  .cooking-it .localized-banner h2 {
+    width: 80%;
+    font-size: 80px;
+  }
+
+  .cooking-it .callout-content-icon h4::after, 
+  .cooking-it .callout-icon-heading .content-heading::after { left: 16px; }
+
+  .cooking-it .callouts-heading .content-heading, 
+  .cooking-it .callout-icon-heading .content-heading { font-size: 35px; } 
+  /*style for it-lang end */ 
+
+  /* style for ja-lang start */
+  .cooking-ja .callout-icon-heading .content-heading { font-size: 33px; }
+  
+  .cooking-ja .callout-icon-heading figure {  
+    width: 30px; 
+    margin-bottom: 6px;
+  }
+
+  .cooking-ja .callout-content .callout-content-icon figure { margin-bottom: 6px; }
+  .cooking-ja .callout-icon-heading .content-heading::after { left: 15px; }
+  .cooking-ja .ad-banner .ad-banner-row a { font-size: 29px; }
+  /* style for ja-lang end */
+
+  /* style for ko lang start */
+  .cooking-ko .localized-banner h2 { font-size: 78px; }
+  .cooking-ko .callout-content .callout-content-icon figure { margin-bottom: 0; }
+  .cooking-ko .callout-icon-heading figure { width: 32px; }
+  /* style for ko kang end */
+
+  /* style for pt lang start */
+  .cooking-pt .callouts-heading .content-heading, 
+  .cooking-pt .callout-icon-heading .content-heading { font-size: 33px; }
+  /* style for pt lang end */
+
+  /* style for ru lang start */
+  .cooking-ru .callout-icon-heading figure { width: 25px; }
+
+  .cooking-ru .callouts-heading .content-heading, 
+  .cooking-ru .callout-icon-heading .content-heading { font-size: 30px; }
+
+  .cooking-ru .callout-content:first-child ul li {
+    -ms-flex-preferred-size: 43%;
+    flex-basis: 43%;
+  }
+
+  .cooking-th .localized-banner h2 { font-size: 69px; }
+  .cooking-th .fantastic-callouts .callout-icon-heading figure { width: 25px; }
+  /* style for ru lang end */
+}
+/* max-width 995px ends */
+
+/* max-width 767px start */
+@media screen and (max-width: 767px) { 
+  .autoplay .lifted-text h2 { font-size: 30px; }
+  .autoplay ul p{ margin-top: 50px; }
+  .fantastic-info h2 { font-size: 25px; }
+  .callout-icon-heading figure { width: 25px; }
+  .callout-content .video-callout li { -ms-flex-preferred-size: 28%; flex-basis: 28%; }
+  .callouts-percentages figure img { height: 35px; }
+  .callouts-heading .content-heading, .callout-icon-heading .content-heading { font-size: 25px; }
+  .callouts-heading figure { width: 30%; }
+  .callout-content ul { margin-left: 30px; }
+  .fantastic-callouts .callouts-percentages li span { font-size: 40px; }
+  .fantastic-callouts .callouts-percentages li figure img{ height: 30px; }
+  .autoplay-video .section-para { font-size: 17px; }
+  .section-row .section-block:nth-child(3) { margin-bottom: 50px; }
+  .section-row .section-block:nth-child(1) { margin: 50px 0 35px; }
+  .fantastic-collection .collection-design-cta { padding-bottom: 40px; }
+  .fantastic-callouts .callouts-percentages { margin:  0 auto 20px; }
+  .callout-content:first-child ul li { margin: 0 0 0 6%; }
+
+  .callout-content ul li { 
+    margin: 0 0 17px 6%;
+    -ms-flex-preferred-size: 43%; 
+    flex-basis: 43%; 
+  }
+ 
+  .localized-footer video {
+    width: 30px;
+    height: 30px;
+  } 
+
+  /* style for de-lang start */
+  .localized-banner-de h2 { width: 83%; }
+  .lang-de .fantastic-callouts .callouts-percentages li figure img { margin-left: 35%; }
+  .lang-de .callout-icon-heading figure { width: 22px; }
+  /* style for de-lang end */
+
+  /* styling for es-lang start */
+  .callout-icon-heading-es figure { 
+    width: 30px;
+    margin-bottom: 40px; 
+  }
+
+  .callout-icon-heading-es .content-heading { font-size: 30px; } 
+  /* styling for es-lang end */
+
+  /* styling for fr-lang start */
+  .cooking-fr .localized-banner h2 { font-size: 60px; }
+  .cooking-fr .callout-icon-heading .content-heading { font-size: 28px; }
+  /* styling for fr-lang end */
+
+  /* style for it-lang start */
+  .cooking-it .localized-banner h2 { font-size: 60px; }
+
+  .cooking-it .callouts-heading .content-heading, 
+  .cooking-it .callout-icon-heading .content-heading { font-size: 29px; }
+  .cooking-it .callout-content:first-child .callout-content-icon { min-width: 150px; }
+  /* style for it-lang end */
+
+  /* style for ja-lang start */
+  .cooking-ko .callout-icon-heading figure {
+    width: 21px;
+    margin-bottom: 4px;
+  }
+
+  .cooking-ja .callout-icon-heading .content-heading { font-size: 27px; }
+  .cooking-ja .callouts-heading .content-heading { font-size: 35px; }
+  .cooking-ja .callout-icon-heading figure { width: 25px; }
+  .cooking-ja .ad-banner .ad-banner-row a { font-size: 24px; }
+
+  .cooking-ja .localized-banner h2 {
+    width: 85%;
+    font-size: 72px;
+  }
+  /* style for ja-lang end */
+
+  /* style for th-lang start */
+  .cooking-th .localized-banner h2 { width: 85%; }
+  /* style for th-lang start */
+
+  /* style for pt lang start */
+  .cooking-pt .callouts-heading .content-heading, 
+  .cooking-pt .callout-icon-heading .content-heading { font-size: 28px; }
+
+  .cooking-pt .callout-content-icon h4::after, 
+  .cooking-pt .callout-icon-heading .content-heading::after {
+    left: 18px;
+    font-size: 18px;
+  }
+
+  .cooking-pt .callout-content:first-child .callout-content-icon { min-width: 150px; }
+  /* style for pt lang end */
+
+  /* style for ru lang start */
+  .cooking-ru .callouts-heading .content-heading,
+  .cooking-ru .callout-icon-heading .content-heading { font-size: 31px; }
+
+  .cooking-ru .callout-icon-heading .content-heading { line-height: 1.4; }
+  .cooking-ru .callout-icon-heading figure { margin-bottom: 40px; }
+
+  .cooking-th .fantastic-callouts .callout-icon-heading figure { 
+    width: 20px; 
+    margin-top: 2px;
+  }
+
+  /* style for ru lang end */
+}
+/* max-width 767px ends */
+
+@media screen and (max-width: 640px) {
+  .callout-content:first-child .callout-content-icon { min-width: 120px; }
+  /* style for de-lang start */
+  .localized-header .logos-de h1 a:nth-child(2) { font-size: 21px; }
+  .localized-banner-de h2 { width: 93%; }
+  .callouts-percentages-de figure { width: 23px; }
+  .callout-icon-heading .content-heading-de { font-size: 21px; }
+  .lang-de .callout-icon-heading figure { width: 19px; } 
+
+  .callout-icon-heading .content-heading-de::after {
+    left: 8px; 
+    font-size: 15px; 
+  }
+  .callout-icon-heading-de figure { width: 21px; }
+  .localized-banner-de h2, .localized-banner-de h2 span { font-size: 50px; }
+  
+  .fantastic-callouts .callouts-percentages-de li figure img {
+    width: 46%;
+    height: 35px;
+  }
+
+  .fantastic-callouts .callouts-percentages-de div { margin-left: 10px; }
+  .callout-content-de ul { margin-left: 0; }
+  
+  .callout-content-de ul span { 
+    font-size: 33px; 
+    letter-spacing: 1px;
+  }
+
+  .white-cta-de { letter-spacing: .5px; }
+
+  .localized-footer-de .footer-text a { 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  /* style for de-lang end */
+
+  /* style for es-lang start */
+  .callout-content-es ul { margin-left: 0; }
+  .callout-icon-heading-es .content-heading { font-size: 25px; }
+  .callout-content-es ul li {
+    -ms-flex-preferred-size: 44%; 
+    flex-basis: 44%;
+  }
+
+  .callout-content-es ul span { font-size: 31px; }
+  .callout-content-es ul .content-label { font-size: 15px; }
+  /* style for es-lang end */
+
+  /* style for fr-lang start */
+  .cooking-fr .callout-content-icon h4::after, 
+  .cooking-fr .callout-icon-heading .content-heading::after { 
+    left: 15px;
+    font-size: 16px; 
+  }
+
+  .cooking-fr .callout-icon-heading figure { width: 18px; }
+
+  .cooking-fr .callouts-heading .content-heading, 
+  .cooking-fr .callout-icon-heading .content-heading { font-size: 20px; }
+
+  .cooking-fr .localized-banner h2 {
+    width: 85%;
+    font-size: 50px;
+  }
+
+  .cooking-fr .callout-content:first-child .callout-content-icon { min-width: 120px; }
+  .cooking-fr .callout-content:last-child .callout-content-icon { min-width: 120px; }
+  /* style for fr-lang end */
+
+  /* style for it-lang start */
+  .cooking-it .localized-banner h2 { font-size: 55px; }
+  .cooking-it .callout-icon-heading figure { width: 18px; }
+  .cooking-it .callouts-heading .content-heading { font-size: 23px; }
+  .cooking-it .callout-icon-heading .content-heading { font-size: 20px; }
+
+  .cooking-it .callout-content-icon h4::after, 
+  .cooking-it .callout-icon-heading .content-heading::after {
+    left: 13px;
+    font-size: 14px;
+  }
+
+  .cooking-it .callout-content ul { margin-left: 0; }
+  .cooking-it .callout-content ul li {
+    -ms-flex-preferred-size: 44%;
+    flex-basis: 44%;
+  }
+
+  .cooking-it .callout-content .video-callout li {
+    -ms-flex-preferred-size: 28%;
+    flex-basis: 28%;
+  }
+  /*style for it-lang end */
+
+  /* style for ja-lang start */
+  .cooking-ja .localized-banner h2 { font-size: 65px; }
+
+  .cooking-ja .callout-icon-heading figure {
+    width: 30px;
+    margin-bottom: 50px;
+  }
+
+  .cooking-ja .callout-icon-heading .content-heading { line-height: 1.5; }
+  .cooking-ja .callout-content ul { margin-left: 0; }
+  .cooking-ja .callout-icon-heading .content-heading { font-size: 30px; }
+  .cooking-ja .ad-banner .ad-banner-row a { font-size: 20px; }
+  /* style for ja-lang end */
+
+  /* style for ko lang start */
+  .cooking-ko .localized-banner h2 { 
+    width: 85%;
+    font-size: 65px; 
+  }
+
+  .cooking-ko .callout-content ul { margin-left: 0; }
+  .cooking-ko .fantastic-callouts .callout-icon-heading figure { margin-bottom: 0; }
+  /* style for ko kang end */
+
+  /* style for th-lang start */
+  .cooking-th .localized-banner h2 { font-size: 49px; }
+  .cooking-th .callout-icon-heading .content-heading { font-size: 23px; }
+  .cooking-th .callout-content ul { margin-left: 0; }
+
+  .cooking-th .callout-content-icon h4::after, 
+  .cooking-th .callout-icon-heading .content-heading::after {
+    left: 15px;
+    font-size: 16px;
+  }
+
+  .cooking-th .fantastic-callouts .callout-icon-heading figure { width: 17px; }
+  /* style for th-lang start */
+
+  /* style for pt lang start */
+  .cooking-pt .callout-icon-heading .content-heading { 
+    font-size: 29px;
+    line-height: 1.5; 
+  }
+
+  .cooking-pt .callout-icon-heading figure { margin-bottom: 40px; }
+  .cooking-pt .callouts-heading .content-heading { font-size: 25px; }
+  .cooking-pt .callout-content ul { margin-left: 0; }
+  /* style for pt lang end */
+
+  /* style for ru lang start */ 
+  .cooking-ru .callout-icon-heading .content-heading { font-size: 26px; }
+  .cooking-ru .callouts-heading .content-heading { font-size: 25px; }
+  .cooking-ru .callout-content:first-child .callout-content-icon figure { width: 9%; }
+  .cooking-ru .callout-content-icon h4 { font-size: 20px; }
+  .cooking-ru .callout-content-icon h4::after { font-size: 17px; }
+  .cooking-ru .callout-content:first-child .callout-content-icon { min-width: 210px; }
+  .cooking-ru .callout-content ul span { font-size: 30px; }
+  /* style for ru lang end */
+}
+
+/* max-width 480px start */
+@media screen and (max-width: 480px) {
+  .autoplay .lifted-text h2 { 
+    margin-bottom: 25px;
+    font-size: 20px; 
+  }
+  
+  .autoplay { padding: 30px 0; }
+  .autoplay .wrapper ul li{ -ms-flex-preferred-size: 100%; flex-basis: 100%; }
+  .autoplay li:nth-child(2) { margin-bottom: 10px; }
+  .autoplay ul { width: 100%; }
+  .autoplay .lifted-text img { width: 15%; }
+  
+  .autoplay .lifted-text { 
+    width: 55%;
+    top: 52%; 
+  }
+  
+  .autoplay li:not(:first-child) figure {
+    width: 50%;
+    margin-left: auto;
+  }
+  
+  .autoplay ul p {
+    width: 90%;
+    margin-top: 60px;
+    font-size: 15px;
+  }
+  
+  .fantastic-info { margin: 30px 0 45px 0; }
+  
+  .fantastic-info h2 { 
+    margin-left: 20px;
+    font-size: 18px; 
+  }
+  
+  .fantastic-callouts h2 { 
+    margin: 0;
+    font-size: 15px; 
+  }
+  
+  .fantastic-callouts h2::after { 
+    font-size: 10px; 
+    top: 0;
+    left: 10px;
+  }
+  
+  .collection-button { 
+    padding: 12px 47px 14px;
+    line-height: 1.3; 
+  }
+  
+  .callout-icon-heading { margin-bottom: 20px; }
+  .callout-icon-heading figure { width: 18px; }
+  .fantastic-callouts .callouts-percentages li span { font-size: 30px; }
+  .fantastic-callouts .callouts-percentages li figure img{ height: 26px; }
+  .fantastic-callouts .callouts-percentages div { margin: 0 0 0 8px; }
+  .fantastic-callouts .callouts-percentages li { margin-bottom: 10px; }
+  .callout-content ul .content-label,
+  .callout-percentages-icon .content-label { font-size: 12px; }
+  .callout-content-icon { min-width: 88px; }
+  .fantastic-callouts .callouts-percentages { margin:  0 auto 10px; }
+
+  .callouts-heading .content-heading,
+  .callout-icon-heading .content-heading { 
+    font-size: 20px; 
+    letter-spacing: 0;
+  }
+  
+  .fantastic-callouts .callouts-percentages li h3 { 
+    margin-top: 10px;
+    font-size: 10px; 
+  }
+  
+  .fantastic-callouts .callouts-images { margin: 30px 0; }
+  .callouts-heading figure { width: 40%; }
+  .callouts-heading .content-para { font-size: 13px; }
+  .callout-content-icon h4 { font-size: 14px; }
+  .callout-content-icon figure { width: 20%; }
+  .fantastic-collection .collection-design-cta { padding: 10px 0 0; }
+  
+  .callout-content-icon h4::after,
+  .callout-icon-heading .content-heading::after {
+    left: 10px;
+    font-size: 11px;
+  }
+  .callout-content-icon h5 { font-size: 16px; }
+
+  .callout-content,
+  .callout-content:last-child { margin-top: 30px; }
+  
+  .callout-content ul {
+    margin: 0; 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: normal; 
+    -ms-flex-direction: row; 
+    flex-direction: row;
+  }
+  
+  .callout-content ul li { 
+    margin-left: 30px; 
+    -ms-flex-preferred-size: 34%; 
+        flex-basis: 34%;
+  }
+  
+  .callout-content ul span { font-size: 25px; }
+  .callout-content ul h3 { font-size: 10px; }
+  .callout-content .video-callout li { -ms-flex-preferred-size: 26%; flex-basis: 26%; }
+  .section-row .section-block:nth-child(1) { margin: 50px 0 30px; }
+  .section-row .section-block:nth-child(3) { margin-bottom: 35px; }
+  .fantastic-collection { margin-bottom: 25px; }
+  .callout-content:first-child .callout-content-icon figure { width: 15%; }
+  .callout-content:first-child .callout-content-icon { min-width: 100px; }
+
+  /* style for de-lang start*/
+  .localized-banner-de h2, .localized-banner-de h2 span { font-size: 40px; } 
+  .white-cta-de { font-size: 12px; }
+  .callout-icon-heading .content-heading-de { font-size: 18px; }
+  .fantastic-callouts .callouts-percentages-de li span { font-size: 25px; }
+  
+  .callout-content-de ul li { 
+    margin-left: 20px;
+    -ms-flex-preferred-size: 39%; 
+    flex-basis: 39%;
+  }
+
+  .callout-content-de .video-callout li {
+    -ms-flex-preferred-size: 26%;
+    flex-basis: 28%;
+  }
+
+  .white-cta-de { letter-spacing: 0; }
+  .localized-header .logos-de h1 a:nth-child(2) { font-size: 17px; }
+  .fantastic-callouts .callouts-percentages-de li figure img { width: 34%; }
+  .lang-de .callout-icon-heading figure { width: 17px; }
+  /* style de-lang end */
+
+  /* styling for es-lang start */
+  .callout-icon-heading-es { margin-bottom: 25px; }
+  .fantastic-callouts .callout-content-icon-es { min-width: 120px; }
+  .callout-icon-heading-es .content-heading { font-size: 23px; }
+  .callout-icon-heading-es .content-heading::after { font-size: 22px; }
+
+  .callout-icon-heading-es figure { 
+    width: 25px;
+    margin-bottom: 30px;
+  }
+
+  .callout-content-icon-es figure { width: 14%; }
+
+  .callout-content-es ul li {
+    margin-left: 15px;
+    -ms-flex-preferred-size: 43%; 
+    flex-basis: 43%;
+  }
+
+  .white-cta-es { font-size: 12px; }
+  .lang-es .callout-content:first-child .callout-content-icon { min-width: 108px; }
+  /* styling for es-lang end */
+
+  /* style for fr-lang start */
+  .cooking-fr .localized-banner h2 { font-size: 40px; }
+  .cooking-fr .callout-content-icon figure { width: 13%; }
+  .cooking-fr .callout-content-icon h4 { font-size: 16px; }
+  .cooking-fr .callout-icon-heading figure { width: 16px; }
+  .cooking-fr .callout-icon-heading .content-heading { font-size: 17px; }
+
+  .cooking-fr .callout-content-icon h4::after, 
+  .cooking-fr .callout-icon-heading .content-heading::after {
+    left: 12px;
+    font-size: 13px;
+  }
+  /* style for fr-lang end */
+
+  /* style for it-lang start */
+  .cooking-it .localized-banner h2 { font-size: 40px; }
+
+  .cooking-it .callout-icon-heading figure { 
+    width: 20px;
+    margin-bottom: 36px; 
+  }
+
+  .cooking-it .callout-icon-heading .content-heading { 
+    font-size: 24px;
+    line-height: 1.5; 
+  }
+
+  .cooking-it .callout-icon-heading .content-heading::after { font-size: 15px; }
+  .cooking-it .callout-content-icon figure { width: 16%; }
+  .cooking-it .callout-content:first-child .callout-content-icon { min-width: 110px; }
+
+  .cooking-it .callout-content ul li {
+    -ms-flex-preferred-size: 34%;
+    flex-basis: 34%;
+  }
+
+  .cooking-it .callout-content .video-callout li {
+    -ms-flex-preferred-size: 26%;
+    flex-basis: 26%;
+  }
+
+  .cooking-it .white-cta { font-size: 11px; }
+  /*style for it-lang end */
+
+  /* style for ja-lang start */
+  .cooking-ja .localized-banner h2 { font-size: 56px; }
+  .cooking-ja .callout-icon-heading .content-heading { font-size: 24px; }
+  .cooking-ja .callouts-heading .content-heading { font-size: 28px; }
+
+  .cooking-ja .callout-icon-heading figure { 
+    width: 25px;
+    margin-bottom: 42px; 
+  }
+
+  .cooking-ja .callout-icon-heading .content-heading::after { font-size: 18px; }
+
+  .cooking-ja .white-cta { font-size: 12px; }
+  .cooking-ja .ad-banner .ad-banner-row a { font-size: 15px; }
+  /* style for ja-lang end */
+
+  /* style for ko lang start */
+  .cooking-ko .localized-banner h2 { font-size: 45px; }
+  .cooking-ko .white-cta { font-size: 12px; }
+  .cooking-ko .fantastic-callouts .callout-icon-heading figure { width: 18px; }
+  
+  /* style for ko lang end */
+
+  /* style for th-lang start */
+  .cooking-th .callout-content:last-child .callout-content-icon { min-width: 88px; }
+  .cooking-th .callout-icon-heading .content-heading { font-size: 20px; }
+  .cooking-th .callout-icon-heading .content-heading::after { left: 10px; }
+  .cooking-th .white-cta { font-size: 12px; }
+  /* style for th-lang end */
+
+  /* style for pt-lang start */
+  .cooking-pt .callout-content:first-child .callout-content-icon { min-width: 110px; }
+  .cooking-pt .callout-content:first-child .callout-content-icon figure { width: 17%; }
+  .cooking-pt .callout-content-icon h4::after { font-size: 13px; }
+  .cooking-pt .callout-icon-heading figure { width: 20px; }
+  .cooking-pt .callout-icon-heading .content-heading { font-size: 24px; }
+  .cooking-pt .callouts-heading .content-heading { font-size: 22px; }
+  /* style for pt-lang end */
+
+  /* style for ru lang start */
+  .cooking-ru .callout-icon-heading figure {
+    width: 20px;
+    margin-bottom: 34px; 
+  }
+
+  .cooking-ru .callouts-heading .content-heading, 
+  .cooking-ru .callout-icon-heading .content-heading { font-size: 21px; }
+
+  .cooking-ru .callout-content:first-child .callout-content-icon { min-width: 150px; }
+  .cooking-ru .callout-content:first-child .callout-content-icon figure { width: 11%; }
+  .cooking-ru .callout-content-icon h4 { font-size: 15px; }
+  .cooking-ru .callout-content-icon h4::after { font-size: 12px; }
+  .cooking-ru .callout-content ul span { font-size: 25px; }
+  
+  .cooking-ru .callout-content:first-child ul li {
+    -ms-flex-preferred-size: 38%;
+    flex-basis: 38%;
+  }
+
+  .cooking-ru .callout-content { 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .cooking-ru .callout-content ul li:nth-child(2n - 1) { margin-left: 0; }
+  .cooking-ru .white-cta { font-size: 12px; }
+  .cooking-th .fantastic-callouts .callout-icon-heading figure { width: 16px; }
+  /* style for ru lang end */
+
+}
+/* max-width 480px ends */
+
+/* max-width 375px start */
+@media screen and (max-width: 375px) {
+
+  .callout-icon-heading .content-heading { font-size: 17px; }
+  .fantastic-callouts .callouts-percentages li span { font-size: 24px; }
+  .callout-percentages-icon .content-label { font-size: 11px; }
+  .callout-content .video-callout li { -ms-flex-preferred-size: 30%; flex-basis: 30%; }
+  .autoplay-video .section-para { font-size: 13px; }
+  .fantastic-callouts .callouts-percentages li figure img { height: 20px; }
+  .callout-content:first-child .callout-content-icon { min-width: 94px; }
+  .callout-content:first-child .callout-content-icon figure { width: 17%; }
+  
+  .callout-content ul li {
+    margin-left: 12px;
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+
+  /* style for de-lang start */
+  .white-cta-de { font-size: 11px; }
+  .localized-banner-de h2, .localized-banner-de h2 span { font-size: 36px; }
+  .callout-icon-heading .content-heading-de { font-size: 15px; }
+  .callout-icon-heading .content-heading-de figure { width: 16px; }
+  .callout-content-de ul span { font-size: 22px; }
+  .lang-de .callout-icon-heading figure { width: 14px; }
+
+  .callout-content-de ul li { 
+    -ms-flex-preferred-size: 43%; 
+    flex-basis: 43%;
+  }
+  /* style for de-lang start */
+
+  /* styling for es-lang start */
+  .callout-icon-heading-es .content-heading {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .callout-icon-heading-es figure {
+    width: 23px;
+    margin-bottom: 27px;
+  }
+
+  .callout-content-es ul li {
+    margin-left: 10px;
+    -ms-flex-preferred-size: 44%;
+    flex-basis: 44%;
+  }
+
+  .callout-icon-heading-es .content-heading::after { font-size: 15px; }
+  .fantastic-callouts .callout-content-icon-es { min-width: 108px; }
+  .callout-content-es ul span { font-size: 20px; }
+  /* styling for es-lang end */
+
+  /* style for fr-lang start */
+  .cooking-fr .localized-banner h2 { font-size: 33px; }
+  .cooking-fr .callout-icon-heading figure { margin-bottom: 26px; }
+
+  .cooking-fr .callout-icon-heading .content-heading { 
+    font-size: 18px;
+    line-height: 1.5; 
+  }
+
+  .cooking-fr .callouts-heading .content-heading { font-size: 16px; }
+  .cooking-fr .callout-content:first-child .callout-content-icon { min-width: 105px; }
+  
+  .cooking-fr .callout-content .video-callout li {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+  }
+
+  .cooking-fr .callout-content ul li {
+    margin-left: 10px;
+    -ms-flex-preferred-size: 44%;
+    flex-basis: 44%;
+  }
+  /* style for fr-lang end*/
+
+  /* style for it-lang start */
+  .cooking-it .callouts-heading .content-heading, 
+  .cooking-it .callout-icon-heading .content-heading { font-size: 20px; }
+  .cooking-it .callouts-heading .content-para { font-size: 12px; }
+  .cooking-it .callout-content ul span { font-size: 24px; } 
+
+  .cooking-it .callout-icon-heading figure {
+    width: 20px;
+    margin-bottom: 33px;
+  }
+
+  .cooking-it .callout-content ul li {
+    -ms-flex-preferred-size: 43%;
+    flex-basis: 43%;
+  }
+  /* style for it-lang end */
+
+  /* style for ja-lang start */
+  .cooking-ja .localized-banner h2 {
+    width: 90%;
+    font-size: 40px;
+  }
+
+  .cooking-ja .callout-icon-heading figure { 
+    width: 27px; 
+    margin-bottom: 36px;
+  }
+
+  .cooking-ja .callout-icon-heading .content-heading { font-size: 21px; }
+  .cooking-ja .callouts-heading .content-heading { font-size: 24px; }
+
+  .callout-content-icon h4::after, 
+  .callout-icon-heading .content-heading::after { font-size: 13px; }
+
+  .cooking-ja .ad-banner .ad-banner-row a { font-size: 10px; }
+  /* style for ja-lang end */
+
+  /* style for ko lang start */
+  .cooking-ko .localized-banner h2 { font-size: 38px; }
+  /* style for ko lang end */
+
+  /* style for th lang start */
+  .cooking-th .localized-banner h2 { font-size: 37px; }
+  .cooking-th .callout-icon-heading .content-heading { font-size: 17px; }
+  .cooking-th .callout-icon-heading .content-heading::after { font-size: 13px; } 
+  /* style for th lang end */
+
+  /* style for pt lang start */
+  .cooking-pt .callout-icon-heading .content-heading { font-size: 20px; }
+  .cooking-pt .callout-icon-heading figure { margin-bottom: 30px; }
+  .cooking-pt .callouts-heading .content-heading { font-size: 19px; }
+  .cooking-pt .callout-content:first-child .callout-content-icon { min-width: 100px; }
+  .cooking-pt .localized-banner h2 { width: 87%; }
+  /* style for pt lang end */
+
+  /* style for ru lang start */
+  .cooking-ru .callout-icon-heading figure { margin-bottom: 26px; }
+  .cooking-ru .callout-icon-heading .content-heading { font-size: 18px; }
+  .cooking-ru .callout-icon-heading .content-heading::after { font-size: 17px; } 
+  .cooking-ru .callouts-heading .content-heading { font-size: 17px; }
+  .cooking-th .fantastic-callouts .callout-icon-heading figure { width: 13px; }
+
+  .cooking-ru .callout-content:first-child ul li {
+    -ms-flex-preferred-size: 47%;
+    flex-basis: 47%;
+  }
+
+  .cooking-ru .callout-content .video-callout li {
+    -ms-flex-preferred-size: 31%;
+    flex-basis: 31%;
+  }
+  /* style for ru lang end */
+}
+/* max-width 375px end */

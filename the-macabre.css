@@ -1,0 +1,958 @@
+/* =============================
+Cta styling start.
+================================ */
+.collection-design-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.video-collection { margin: 0 30px 130px;}
+.video-collection .collection-design-cta { padding: 80px 0 30px; }
+
+/* Common styling start. */
+.wrapper {
+  max-width: 1280px;
+  width: 88.9%;
+  margin: 0 auto;
+}
+
+.the-macabre-page .collection-design-cta .black-cta,
+.the-macabre-page .collection-design-cta .white-cta { 
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+/* =============================
+global styling start.
+================================ */
+.section-para {
+  color: #fff;
+  font-family: 'Roboto-Light';
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: .91px;
+}
+
+/* =============================
+global styling end.
+================================ */
+
+/* =============================
+The-macabre page styling start.
+================================ */
+.the-macabre-page { background-image: -o-linear-gradient(116deg, #080808 100%, #131313 0%); background-image: linear-gradient(334deg, #080808 100%, #131313 0%); }
+
+/* =============================
+autoplay-video section styling start.
+================================ */
+.autoplay-video { 
+  margin: 130px 0 70px; 
+  position: relative;
+}
+
+.autoplay { padding: 0; }
+
+.autoplay-video .block-images { 
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-pack: justify; 
+  -ms-flex-pack: justify; 
+  justify-content: space-between;
+}
+
+.autoplay-video .block-images figure { 
+  -ms-flex-preferred-size: 49%; 
+  flex-basis: 49%; 
+}
+
+.section-row {
+  width: 72%;
+  margin: 0 auto;
+}
+
+.section-row .section-content {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section-row .section-content figure { margin-right: 60px; }
+
+.section-row .section-content img {
+  width: 40px;
+  height: 40px;
+}
+
+/* =============================
+autoplay-video section styling end.
+================================ */
+
+/* =============================
+The-macabre page Explore Macabre Collection section styling start.
+================================ */
+.explore-collection { overflow-x: hidden; }
+.explore-collection .section-wrapper { width: 86%; }
+.explore-collection { margin-bottom: 120px;}
+
+.explore-collection .inner-section{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.explore-collection .inner-section .section-content { 
+  margin-left: 60px; 
+  -ms-flex-preferred-size: 48%; 
+  flex-basis: 48%;
+}
+
+.explore-collection .inner-section .section-content h3{
+  margin-bottom: 14px;
+  color: #fff;
+  font-family: 'Roboto-Medium';
+  font-size: 35px;
+  letter-spacing: 4px;
+  line-height: .8;
+  text-transform: uppercase;
+}
+
+.explore-collection .inner-section .section-content p { 
+  margin-bottom: 45px;
+  color: #9b9b9b;
+  font-family: 'Roboto-Light';
+  font-size: 20px;
+}
+
+.explore-collection .inner-section figure{
+  -ms-flex-preferred-size: 43%;
+  flex-basis: 43%;
+}
+
+.explore-collection .inner-section .section-content li:first-child{ margin-bottom: 40px; }
+.explore-collection .collection-design-cta .white-cta { letter-spacing: 1px; }
+
+.explore-collection .collection-design-cta { 
+  padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; 
+}
+
+.explore-collection .collection-design-cta a { 
+  width: 70%;
+  margin-left: 0; 
+}
+
+/* de page */
+.the-macabre-page-de .video-collection .white-cta { width: 530px; }
+.the-macabre-page-de .explore-collection .collection-design-cta a { width: 80%; }
+.the-macabre-page-de .white-cta::before, .the-macabre-page-de .black-cta::before { right: 10px; }
+
+.the-macabre-page-de .white-cta,
+.the-macabre-page-de .black-cta {
+  padding: 20px 40px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* =============================
+The-macabre page Explore Macabre Collection section styling end.
+================================ */
+
+/* =============================
+counter section styling start.
+================================ */
+
+.callout-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.fantastic-callouts-bg-images figure {
+  position: absolute;
+  bottom: 0;
+}
+
+.callout-icon-heading { 
+  margin-bottom: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.the-macabre-page .fantastic-callouts { margin: 0 30px 80px; }
+
+.callout-icon-heading .content-heading {
+  margin-left: 2%;
+  color: #fff;
+  font-family: "Roboto-Black";
+  font-size: 50px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.callout-icon-heading .content-heading::after {
+  content: "/";
+  border-right: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 35px;
+  color: transparent;
+  font-size: 25px;
+  font-weight: 400;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.callout-percentages-icon .content-label { 
+  margin-bottom: 25px;
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 30px;
+  letter-spacing: 3px; 
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+.callout-percentages-icon-ja .content-label { font-size: 25px; }
+
+.fantastic-callouts h4::first-letter { text-transform: capitalize;}
+
+.fantastic-callouts .callouts-percentages {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.fantastic-callouts .callouts-percentages li { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fantastic-callouts .callouts-percentages li figure { margin-top: 25px;}
+.fantastic-callouts .callouts-percentages li figure img { width: 11px;}
+.fantastic-callouts .callouts-percentages div { margin-left: 23px;}
+
+.fantastic-callouts .callouts-percentages li span {
+  color: #fff;
+  font-family: 'Misto';
+  font-size: 60px;
+  line-height: 1.43;
+  letter-spacing: 2.33px;
+}
+
+.callout-percentages-icon .content-label .drop-content { 
+  display: block; 
+  font-family: "Roboto-Light";
+  font-size: 30px;
+}
+
+/* =============================
+counter section styling end.
+================================ *
+
+/* de language styling */
+.the-macabre-page-de .explore-collection .inner-section .section-content h3 { 
+  font-size: 30px;
+  line-height: 1.2; 
+}
+
+.the-macabre-page-de .callout-icon-heading {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.the-macabre-page-de .callout-icon-heading figure { 
+  position: relative;
+  top: 30px;
+}
+
+/* es page */
+.the-macabre-page-es .explore-collection .inner-section .section-content h3 { 
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1.2; 
+}
+
+/* pt page */
+.the-macabre-page-pt .explore-collection .collection-design-cta a { width: 72%; }
+
+/* it page */
+.the-macabre-page-it .explore-collection .inner-section .section-content h3,
+.the-macabre-page-ru .explore-collection .inner-section .section-content h3,
+.the-macabre-page-fr .explore-collection .inner-section .section-content h3 {
+  font-size: 31px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.the-macabre-page-it .explore-collection .collection-design-cta a,
+.the-macabre-page-fr .explore-collection .collection-design-cta a {
+  width: 80%;
+  padding: 25px 45px;
+}
+
+.the-macabre-page-ru .explore-collection .collection-design-cta a {
+  width: 83%;
+  padding: 24px 40px;
+}
+
+.localized-banner-fr h2 { width: 58%; }
+/* media query start */
+
+/* Max-width 1350px start */
+@media screen and (max-width: 1350px) {
+  /* Counter start. */
+  .fantastic-callouts .callouts-percentages li span { font-size: 43px;}
+  .fantastic-callouts .callouts-percentages li figure { margin-top: 5px;}
+  .callout-percentages-icon .content-label,
+  .callout-percentages-icon .content-label .drop-content { font-size: 25px;}
+  /* Counter end. */
+
+  /* es page */
+  .the-macabre-page-es .callout-icon-heading .content-heading { font-size: 48px; }
+  .the-macabre-page-es .explore-collection .collection-design-cta a { width: 80%; }
+  .the-macabre-page-es .explore-collection .white-cta { padding: 28px 42px; }
+}
+/* Max-width 1350px end */
+
+/* min-width 1280px start*/
+@media screen and (min-width: 1280px) {
+  .the-macabre-page .black-cta,
+  .the-macabre-page .white-cta { padding: 28px 54.1px; }
+}
+/* min-width 1280px end*/
+
+/* max-width 1280px start*/
+@media screen and (max-width: 1280px) {
+  /* explore-collection start */
+  .explore-collection .inner-section .section-content h3 { 
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  .explore-collection .inner-section .section-content p { font-size: 18px; }
+  /* explore-collection end */
+  
+  /* counter start */
+  .callout-content-container { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+  .callout-content:last-child { margin-left: 0; }
+  /* counter end */
+
+  /* th language styling */
+  .the-macabre-page-th .callout-icon-heading .content-heading { font-size: 48px; }
+
+  /* ja language styling*/
+  .the-macabre-page-ja .callout-icon-heading .content-heading { font-size: 42px; }
+  .the-macabre-page-ja .callout-icon-heading figure { width: 35px; }
+  .the-macabre-page-ja .callout-percentages-icon .content-label { font-size: 20px; }
+
+  /* de */
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { font-size: 25px; }
+  .the-macabre-page-de .explore-collection .collection-design-cta a { width: 88%; }
+
+  .the-macabre-page-de .explore-collection .white-cta, .explore-collection .the-macabre-page-de .black-cta { 
+    padding: 20px 26px; 
+    font-size: 13px;
+  }
+
+  .the-macabre-page-de .callout-icon-heading .content-heading { font-size: 45px; }
+  .the-macabre-page-de .callout-icon-heading figure { width: 35px; }
+
+  .the-macabre-page-de .callout-icon-heading .content-heading::after {
+    left: 30px;
+    font-size: 22px;
+  }
+
+  .the-macabre-page-de .callout-icon-heading figure { top: 25px; }
+
+  /* es, pt & it pages */
+  .the-macabre-page-es .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-pt .explore-collection .inner-section .section-content h3 { font-size: 25px; }
+
+  .the-macabre-page-es .callout-icon-heading .content-heading {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 37px;}
+  .macabre-common .callout-icon-heading figure{ margin-top: 8px; }
+  .macabre-common .callout-icon-heading .content-heading::after { font-size: 30px; }
+
+  .macabre-common .callout-icon-heading { 
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .the-macabre-page-es .explore-collection .collection-design-cta a { width: 75%; }
+  .the-macabre-page-es .explore-collection .white-cta { padding: 20px 42px; }
+
+  .common-heading .callout-icon-heading .content-heading::after { left: 20px; }
+
+  .the-macabre-page-pt .callout-icon-heading figure,
+  .the-macabre-page-it .callout-icon-heading figure { width: 34px; }
+
+  .common-heading .callout-icon-heading .content-heading{ 
+    font-size: 42px; 
+    line-height: 1.2;
+  }
+
+  .the-macabre-page-it .explore-collection .collection-design-cta a { 
+    width: 81%;
+    padding: 20px 35px; 
+  }
+
+  .the-macabre-page-it .callout-icon-heading .content-heading::after { font-size: 30px; }
+
+  /* ru page */
+  .the-macabre-page-ru .explore-collection .collection-design-cta a {
+    width: 85%;
+    padding: 20px 30px;
+  }
+
+  /* fr page */
+  .the-macabre-page-fr .explore-collection .inner-section .section-content h3 { font-size: 28px; }
+
+  .the-macabre-page-fr .explore-collection .collection-design-cta a {
+    padding: 20px 38px;
+  }
+}
+/* max-width 1280px end*/
+
+/* Max-width 1024px start. */
+@media screen and (max-width: 1024px) {
+  /* counter start. */
+  .fantastic-callouts .callouts-percentages li { 
+    -ms-flex-preferred-size: 50%; 
+    flex-basis: 50%;
+  }
+
+  .fantastic-callouts .callouts-percentages { 
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+  }
+  
+  .fantastic-callouts .callouts-percentages li figure { margin-top: 15px;}
+  .callout-percentages-icon .content-label .drop-content { display: inline-block; }
+  .fantastic-callouts .callouts-percentages li span { font-size: 50px; }
+  .callout-percentages-icon .content-label,
+  .callout-percentages-icon .content-label .drop-content{ margin-bottom: 15px; }
+  /* counter end. */
+
+  .the-macabre-page-th .callout-icon-heading .content-heading { font-size: 45px; }
+
+  /* ES page */
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 35px;}
+
+  /* ja page */
+  .the-macabre-page-ja .fantastic-callouts .callouts-percentages li span { font-size: 45px; }
+  .the-macabre-page-ja .callout-percentages-icon .content-label { font-size: 25px; }
+
+  /* de page */
+  .the-macabre-page-de .video-collection .white-cta { width: 500px; }
+}
+/* Max-width 1024px end. */
+
+/* max-width 995px start*/
+@media screen and (max-width: 995px) {
+  /* counter start */
+  .callout-icon-heading { margin-bottom: 28px; }
+  .callout-icon-heading figure { width: 30px;}
+  .callout-icon-heading .content-heading { font-size: 40px; }
+  .the-macabre-page-th .callout-icon-heading .content-heading { font-size: 36px; }
+  .fantastic-info { margin: 20px 0 80px; }
+  .fantastic-collection { padding: 20px 0 60px; }
+  .autoplay { padding: 0; }
+  .fantastic-callouts .callouts-percentages li { margin-bottom: 26px; }
+  .the-macabre-page .fantastic-callouts { margin: 0 0 25px; }
+  .explore-collection .collection-design-cta .white-cta { letter-spacing: 3px; }
+  
+  .fantastic-callouts .callouts-percentages li figure { margin-top: 8px; }
+  .fantastic-callouts .callouts-percentages li figure img{ 
+    width: auto;
+    height: 50px; 
+  }
+  .fantastic-callouts .callouts-percentages li h5 { margin-top: 15px; }
+
+  .callout-icon-heading .content-heading::after {
+    left: 25px;
+    font-size: 20px;
+  }
+  /* counter end */
+
+  /* global styling */
+  .section-para { font-size: 16px; }
+  .explore-collection .collection-design-cta { display: none; }
+  
+  .video-collection .collection-design-cta { 
+    width: 88.9%;
+    padding: 0;
+    margin: 25px auto 50px; 
+  }
+  .video-collection { margin: 0 0 35px;}
+  /* global styling end */
+
+  /* auto play video section start*/
+  .section-row .section-content figure { margin-right: 0; }
+  .section-row { width: 100%; }
+
+  .section-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .section-row .section-block:nth-child(1) { 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+    -ms-flex-direction: column; 
+    flex-direction: column;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; 
+  }
+
+  .section-row .section-content:nth-child(1) figure { margin-bottom: 20px; }
+
+  .section-row .section-block:nth-child(2) { 
+    margin-bottom: 25px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; 
+  }
+  
+  .section-row .section-block:nth-child(3) { 
+    -webkit-box-ordinal-group: 4; 
+    -ms-flex-order: 3; 
+    order: 3; 
+  }
+
+  .section-row .section-content { margin-bottom: 15px; }
+  .autoplay-video { margin: 25px 0 30px; }
+  /* auto play video section end */
+
+  /* explore-collection section start*/
+  .explore-collection { margin-bottom: 70px; }
+  .explore-collection .inner-section .section-content { margin-left: 0; }
+
+  .explore-collection .inner-section figure { 
+    -ms-flex-preferred-size: 40%; 
+    flex-basis: 40%; 
+  }
+
+  .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { 
+    letter-spacing: 1.5px;
+    line-height: 21px;
+    font-size: 20px; 
+  }
+
+  .explore-collection .inner-section .section-content .text-from-left:nth-child(4){ margin-bottom: 0; }
+  /* explore-collection section end*/
+
+  /* ko page translation */
+  .the-macabre-page-ko .explore-collection .inner-section .section-content p { font-size: 16px; }  
+
+  /* ja page */
+  .the-macabre-page-ja .callout-icon-heading .content-heading { font-size: 35px; }
+  .the-macabre-page-ja .callout-icon-heading figure { width: 30px; }
+  .callout-icon-heading .content-heading::after { left: 15px; }
+
+  /* de page */
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { font-size: 18px; }
+  .the-macabre-page-de .explore-collection .inner-section .section-content p { font-size: 16px; }
+  .the-macabre-page-de .callout-icon-heading .content-heading { font-size: 36px; }
+  .the-macabre-page-de .callout-icon-heading figure { width: 30px; }
+  .callout-percentages-icon .content-label,
+  .callout-percentages-icon .content-label .drop-content{ font-size: 22px;}
+
+  .the-macabre-page-de .callout-icon-heading .content-heading::after {
+    left: 20px;
+    font-size: 20px;
+  }
+
+  .the-macabre-page-de .callout-icon-heading figure { top: 20px; }
+  .the-macabre-page-de .video-collection .white-cta { width: 560px; }
+
+  /* es, pt, it page */
+  .macabre-common .callout-icon-heading .content-heading{ font-size: 40px; }
+  .fantastic-callouts .callout-icon-heading .pt-content-heading { font-size: 33px;}
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 28px;}
+
+  .macabre-common .callout-icon-heading figure{ width: 35px; }
+  
+  .macabre-common .explore-collection .inner-section .section-content h3{ font-size: 20px; }
+}
+/* max-width 995px end */
+
+/* max-width 767px start */
+@media screen and (max-width: 767px) { 
+  .fantastic-callouts .callouts-percentages li figure img{ height: 40px; } 
+  .callouts-heading .content-heading, .callout-icon-heading .content-heading, .the-macabre-page-th .callout-icon-heading .content-heading  { font-size: 25px; }
+
+  .explore-collection .inner-section figure { 
+    -ms-flex-preferred-size: 35%; 
+    flex-basis: 35%; 
+  }
+
+  .explore-collection .inner-section .section-content { 
+    -ms-flex-preferred-size: 61%; 
+    flex-basis: 61%; 
+  }
+
+  /* th & de page styling */
+  .the-macabre-page-th .callout-icon-heading figure,
+  .the-macabre-page-de .callout-icon-heading figure { width: 20px; }
+  .the-macabre-page-de .callout-icon-heading figure { top: 2px; }
+  .the-macabre-page-de .callout-icon-heading .content-heading::after { left: 10px; }
+
+  .the-macabre-page-de .callout-icon-heading .content-heading { 
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .the-macabre-page-de .callout-percentages-icon .content-label, 
+  .the-macabre-page-de .callout-percentages-icon .content-label .drop-content { font-size: 16px; }
+
+  .the-macabre-page-de .video-collection .white-cta {
+    width: auto;
+    padding: 20px 38px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* ja page */
+  .the-macabre-page-ja .callout-icon-heading { 
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; 
+  }
+
+  .the-macabre-page-ja .callout-icon-heading .content-heading { 
+    font-size: 25px; 
+    line-height: 1.3;
+  }
+    
+  .the-macabre-page-ja .callout-icon-heading figure{
+    width: 25px;
+    position: relative;
+    top: 4px;
+  }
+
+  .the-macabre-page-ja .fantastic-callouts .callouts-percentages li span { font-size: 40px; }
+  .the-macabre-page-ja .callout-percentages-icon .content-label { font-size: 22px; }
+
+  /* es, pt, it page */
+  .macabre-common .callout-icon-heading .content-heading { font-size: 30px; }
+  .fantastic-callouts .callout-icon-heading .pt-content-heading { font-size: 27px;}
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 23px;}
+
+  .macabre-common .callout-icon-heading .content-heading::after { font-size: 25px; }
+
+  .macabre-common .callout-icon-heading figure { 
+    width: 26px; 
+    margin-top: 6px;
+  }
+}
+/* max-width 767px ends */
+
+/* max-width 640px start */
+@media screen and (max-width: 640px) {
+  /* explore-collection start */
+  .explore-collection .inner-section .section-content h3,
+  .macabre-common .explore-collection .inner-section .section-content h3 { font-size: 18px; }
+
+  .explore-collection .inner-section .section-content p, 
+  .the-macabre-page-ko .explore-collection .inner-section .section-content p { font-size: 14px; }
+
+  .fantastic-callouts .callouts-percentages li figure img{ height: 30px; }
+  .explore-collection .inner-section .section-content p:last-child { margin-bottom: 0; }
+
+  /* explore-collection end */
+
+  /* counter start */
+  .fantastic-callouts .callouts-percentages li span,
+  .the-macabre-page-ja .fantastic-callouts .callouts-percentages li span { font-size: 28px; }
+  
+  .callout-percentages-icon .content-label,
+  .callout-percentages-icon .content-label .drop-content,
+  .the-macabre-page-ja .callout-percentages-icon .content-label,
+  .the-macabre-page-ja .callout-percentages-icon .content-label .drop-content  { font-size: 18px;}
+
+  .fantastic-callouts .callouts-percentages li figure { margin-top: 8px; }
+  .fantastic-callouts .callouts-percentages li figure img { height: 30px; }
+  .fantastic-callouts .callouts-percentages div { margin-left: 8px; }
+  .fantastic-callouts .callouts-percentages li { margin-bottom: 10px; }
+  .fantastic-callouts .callouts-percentages li h5 { margin-top: 10px; }
+  /* counter end */
+
+  /* th page translation */
+  .the-macabre-page-th .localized-banner h2 { width: 73%; }
+  .the-macabre-page-th .callout-icon-heading figure { width: 22px; }
+  .the-macabre-page-th .callout-icon-heading .content-heading { font-size: 22px; }
+
+  .the-macabre-page-th .callout-icon-heading .content-heading::after { 
+    font-size: 16px;
+    left: 5px; 
+  }
+
+  /* de page translation */
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { font-size: 16px; }
+  .the-macabre-page-de .explore-collection .inner-section .section-content p { font-size: 14px; }
+  .the-macabre-page-de .two-cta-container li { width: 100%; }
+
+  .the-macabre-page-de .video-collection .white-cta { 
+    padding: 18px 30px; 
+    font-size: 13px;
+  }
+
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { margin-bottom: 10px; }
+  .the-macabre-page-de .callout-icon-heading .content-heading { font-size: 22px; }
+
+  /* es, pt, it page */
+  .macabre-common .callout-icon-heading .content-heading { font-size: 25px; }
+  .fantastic-callouts .callout-icon-heading .pt-content-heading { font-size: 20px;}
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 17px;}
+
+  .macabre-common .callout-icon-heading figure { 
+    width: 23px; 
+    margin-top: 4px;
+  }
+
+  .macabre-common .callout-icon-heading .content-heading::after { font-size: 20px; }
+
+  .common-heading .callout-icon-heading .content-heading::after { left: 10px; }
+}
+/* max-width 640px end */
+
+/* max-width 480px start */
+@media screen and (max-width: 480px) {
+  /* global */
+  .section-para { font-size: 10px; }
+  .localized-banner h2 span { margin: 50px 0 10px; }
+  /* global end */
+
+  /* counter section start */
+  .callout-icon-heading .content-heading::after,
+  .the-macabre-page-th .callout-icon-heading .content-heading::after{
+    left: 10px;
+    font-size: 11px;
+  }
+
+  .callout-icon-heading figure { width: 14px; }
+
+  .callout-icon-heading .content-heading,
+  .the-macabre-page-th .callout-icon-heading .content-heading  { 
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+
+  .callout-icon-heading figure { width: 18px; }
+  
+  .fantastic-callouts .callouts-percentages li span,
+  .the-macabre-page-ja .fantastic-callouts .callouts-percentages li span { font-size: 25px; }
+  
+  .fantastic-callouts .callouts-percentages li figure img{ height: 26px; }
+
+  .callout-percentages-icon .content-label,
+  .callout-percentages-icon .content-label .drop-content { 
+    font-size: 12px; 
+    letter-spacing: 2px;
+  }
+
+  .callout-percentages-icon .content-label { margin-top: 15px; }
+  /* counter section end */
+
+  /* .explore-collection */
+  .section-row .section-content img { 
+    width: 20px; 
+    height: 20px;
+  }
+
+  .explore-collection { margin-bottom: 40px; }
+  .explore-collection .inner-section .section-content p:last-child { margin-bottom: 0; }
+
+  .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-es .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-it .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-fr .explore-collection .inner-section .section-content h3 { 
+    margin-bottom: 2px;
+    font-size: 15px; 
+    letter-spacing: 1px;
+  }
+
+  .the-macabre-page-fr .explore-collection .inner-section .section-content h3 { font-size: 13px; }
+
+  .explore-collection .inner-section .section-content p,
+  .the-macabre-page-ko .explore-collection .inner-section .section-content p { 
+    margin-bottom: 12px;
+    font-size: 12px; 
+    letter-spacing: .45px;
+  }
+
+  .explore-collection .inner-section figure { 
+    -ms-flex-preferred-size: 32%; 
+    flex-basis: 32%; 
+  }
+
+  .explore-collection .inner-section .section-content { 
+    -ms-flex-preferred-size: 61%; 
+    flex-basis: 61%; 
+  }
+
+  /* .explore-collection */
+
+  /* th page translation */
+  .the-macabre-page-th .localized-banner h2 { width: 65%; }
+  .the-macabre-page-th .explore-collection .inner-section .section-content p { font-size: 11px; }
+
+
+  /* de page translation */
+  .the-macabre-page-de .callout-icon-heading .content-heading { font-size: 20px; }
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { font-size: 14px; }
+  .the-macabre-page-de .explore-collection .inner-section .section-content p { font-size: 12px; }
+  .the-macabre-page-de .callout-percentages-icon .content-label, 
+  .the-macabre-page-de .callout-percentages-icon .content-label .drop-content { font-size: 14px; }
+  .the-macabre-page-de .white-cta::before { right: 6px; }
+  .the-macabre-page-de .video-collection .white-cta {
+    padding: 12px 20px;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  /* ja page */
+  .the-macabre-page-ja .callout-icon-heading .content-heading { font-size: 20px; }
+  .the-macabre-page-ja .callout-icon-heading figure { width: 22px; }
+  .the-macabre-page-ja .callout-percentages-icon .content-label { font-size: 15px; }
+
+  /* es page */
+  .macabre-common .callout-icon-heading .content-heading { font-size: 22px; }
+  .fantastic-callouts .callout-icon-heading .pt-content-heading { font-size: 17px;}
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 14px;}
+  .macabre-common .callout-icon-heading figure { width: 22px; }
+}
+/* max-width 480px end */
+
+/* max-width 375px start*/
+@media screen and (max-width: 375px) {
+  /* banner section start */
+  .localized-banner-image img { 
+    -o-object-position: 65%;
+    object-position: 65%;
+  }
+  /* banner section end */
+
+  .callout-icon-heading .content-heading{ font-size: 16px; }
+  .the-macabre-page-th .callout-icon-heading .content-heading { font-size: 15px; }
+  .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-es .explore-collection .inner-section .section-content h3 { font-size: 12px; }
+
+  .callout-percentages-icon .content-label { 
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .explore-collection .inner-section figure { 
+    -ms-flex-preferred-size: 36%; 
+    flex-basis: 36%; 
+  }
+
+  .explore-collection .inner-section .section-content { 
+    -ms-flex-preferred-size: 63%; 
+    flex-basis: 63%; 
+  }
+
+  /* .the-macabre-page-th */
+  .the-macabre-page-th .callout-icon-heading figure { width: 18px; }
+  .the-macabre-page-th .localized-banner h2 { width: 72%; }
+  .the-macabre-page-th .explore-collection .inner-section .section-content p { font-size: 9px; }
+
+  /* macabre de page */
+  .the-macabre-page-de .callout-icon-heading .content-heading { font-size: 15px; }
+  .the-macabre-page-de .explore-collection .inner-section .section-content h3 { 
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .the-macabre-page-de .explore-collection .inner-section .section-content p { font-size: 10px; }
+  .the-macabre-page-de .callout-percentages-icon .content-label, 
+  .the-macabre-page-de .callout-percentages-icon .content-label .drop-content { font-size: 12px; }
+
+  .the-macabre-page-de .video-collection .white-cta {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+
+  .the-macabre-page-de .callout-icon-heading figure { 
+    top: 0;
+    width: 15px; 
+  }
+
+  .the-macabre-page-de .callout-icon-heading .content-heading::after {
+    left: 6px;
+    font-size: 16px;
+  }
+
+  /* ja page */
+  .the-macabre-page-ja .callout-percentages-icon .content-label { font-size: 13px; }
+
+  /* es page */
+  .macabre-common .callout-icon-heading .content-heading { font-size: 18px; }
+  .fantastic-callouts .callout-icon-heading .pt-content-heading { font-size: 14px;}
+  .container .fantastic-callouts .callout-icon-heading .es-content-heading { font-size: 12px;}
+  .macabre-common .callout-icon-heading figure{ width: 20px; }
+  .macabre-common .callout-icon-heading .content-heading::after { font-size: 15px; }
+  .macabre-common .callout-icon-heading figure { margin-top: 2px; }
+
+  /* pt page */
+  .the-macabre-page-pt .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-it .explore-collection .inner-section .section-content h3,
+  .the-macabre-page-fr .explore-collection .inner-section .section-content h3 { font-size: 12px; }
+  .the-macabre-page-pt .explore-collection .inner-section .section-content p ,
+  .the-macabre-page-it .explore-collection .inner-section .section-content p,
+  .the-macabre-page-fr .explore-collection .inner-section .section-content h3 { font-size: 10px; }
+}
+/* max-width 375px end */
+
+/* media query end */
+
+/* =============================
+The-macabre page styling end.
+================================ */
