@@ -1,4 +1,4 @@
-(function ($) {
+e(function ($) {
   
   // to get scrollbar width of body
   function getScrollbarWidth() {
